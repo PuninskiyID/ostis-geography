@@ -1,0 +1,52 @@
+nrel_coastine_length
+<-sc_node_norole_relation;
+<-relation;
+<-binary_relation;
+<-oriented_relation;
+<-antireflexive_relation;
+<-antitransitive_relation;
+<-asymmetric_relation;
+=>nrel_main_idtf:
+	[длина береговой линии]
+	(* <- lang_ru;; *);
+	[coastine length]
+	(* <- lang_en;; *);
+=>nrel_first_domain: concept_lake;
+=>nrel_second_domain: concept_number;
+=>nrel_definitional_domain:
+	...
+	(*
+	<= nrel_combination:
+		{
+		concept_lake;
+		concept_number
+		};;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (длина береговой линии)]
+		(* <- lang_ru;; *);
+		[Def. (coastine length)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[длина береговой линии* - бинарное отношение, связывающее озеро и число.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[coastine length* - a binary relation that connects a lake and a number.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+            concept_lake;
+		    concept_number
+		};;
+	*);;

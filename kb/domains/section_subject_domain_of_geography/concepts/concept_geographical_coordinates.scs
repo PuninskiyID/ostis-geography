@@ -1,0 +1,36 @@
+concept_geographical_coordinates
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[географические координаты]
+	(* <- lang_ru;; *);
+	[geographical_coordinates]
+	(* <- lang_en;; *);
+=>nrel_system_identifier:
+	[concept_geographical_coordinates];
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (географические координаты)]
+		(* <- lang_ru;; *);
+		[Def. (geographical coordinates)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Географические координаты - координаты определяющие положение точки на земной поверхности или, более широко, в географической оболочке.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Geographic coordinates - coordinates defining the position of a point on the earth's surface or, more broadly, in a geographical shell.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			geographical_coordinates
+		};;
+	*);;

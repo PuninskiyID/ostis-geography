@@ -1,0 +1,35 @@
+concept_river
+<- sc_node_class;
+=> nrel_main_idtf:
+	[река]
+	(* <- lang_ru;; *);
+	[river]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (река)]
+		(* <- lang_ru;; *);
+		[Def. (river)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[река — природный водный поток значительных размеров с естественным течением по руслу от истока вниз до устья.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[river - natural flowing watercourse, usually freshwater stream, flowing on the surface or inside caves towards another waterbody at a lower elevation, such as an ocean, sea, bay, lake, wetland or another river. In some cases, a river flows into the ground or becomes dry at the end of its course without reaching another body of water.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_river
+		};;
+	*);
+<= nrel_inclusion: concept_hydrology;;

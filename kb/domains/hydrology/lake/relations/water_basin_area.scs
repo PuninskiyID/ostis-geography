@@ -1,0 +1,52 @@
+nrel_water_basin_area
+<-sc_node_norole_relation;
+<-relation;
+<-binary_relation;
+<-oriented_relation;
+<-antireflexive_relation;
+<-antitransitive_relation;
+<-asymmetric_relation;
+=>nrel_main_idtf:
+	[площадь водного бассейна]
+	(* <- lang_ru;; *);
+	[water basin area]
+	(* <- lang_en;; *);
+=>nrel_first_domain: concept_lake;
+=>nrel_second_domain: concept_number;
+=>nrel_definitional_domain:
+	...
+	(*
+	<= nrel_combination:
+		{
+		concept_lake;
+		concept_number
+		};;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (площадь водного бассейна)]
+		(* <- lang_ru;; *);
+		[Def. (water basin area)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[площадь водного бассейна* - бинарное отношение, связывающее озеро и число.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[water basin area* - a binary relation that connects a lake and a number.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+            concept_lake;
+		    concept_number
+		};;
+	*);;

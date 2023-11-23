@@ -1,0 +1,35 @@
+concept_lake
+<- sc_node_class;
+=> nrel_main_idtf:
+	[озеро]
+	(* <- lang_ru;; *);
+	[lake]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (озеро)]
+		(* <- lang_ru;; *);
+		[Def. (lake)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[озеро — компонент гидросферы, представляющий собой естественно возникший водоём, заполненный в пределах озёрной чаши (озёрного ложа) водой и не имеющий непосредственного соединения с морем (океаном).]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[lake - naturally occurring, relatively large body of water localized in a basin completely surrounded by dry land, with much slower-moving flow than any inflow or outflow streams that serve to feed or drain it.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_lake
+		};;
+	*);
+<= nrel_inclusion: concept_hydrology;;
