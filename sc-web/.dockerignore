@@ -1,7 +1,0 @@
-.git
-.gitignore
-.github
-Dockerfile
-.dockerignore
-node_modules
-docs

@@ -1,8 +1,9 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
 set -eo pipefail
 
-source set_vars.sh
+if [ -z "${PLATFORM_PATH}" ];
+then
+  source "$(cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd)"/set_vars.sh
+fi
 
-cd "${APP_ROOT_PATH}"/sc-web/scripts
-./run_scweb.sh
+"${PLATFORM_PATH}/scripts/run_sc_web.sh" "$@"

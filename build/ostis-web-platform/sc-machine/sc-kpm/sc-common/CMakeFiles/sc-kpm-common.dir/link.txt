@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,libsc-kpm-common.so -o ../../../../../bin/libsc-kpm-common.so CMakeFiles/sc-kpm-common.dir/sc_keynodes.c.o  -Wl,-rpath,/media/xxcreepsoxx/3CD04AE5D04AA4CC/GitRep/Ostis_example_app_080/ostis-example-app/bin ../../../../../bin/libsc-core.so -L/usr/lib/x86_64-linux-gnu -Wl,--export-dynamic -lgmodule-2.0 -pthread -lglib-2.0 

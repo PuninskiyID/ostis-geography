@@ -1,13 +1,9 @@
-# Change start page
-!./kb/ims.ostis.kb/ui/menu/ui_main_menu.scs
-!./kb/ims.ostis.kb/ims/knowledge_base_IMS.scs
+# common
+ostis-web-platform/ims.ostis.kb
 
-#components
-kb/ims.ostis.kb
-kb/ui_menu
-kb/tests
-kb/domains
-problem-solver/py/modules/
-problem-solver/cxx/modules/
-interface/
-ostis-osm/
+# components
+kb/
+
+# specifications
+problem-solver/cxx/exampleModule/specifications/agent_of_isomorphic_search
+problem-solver/cxx/exampleModule/specifications/agent_of_subdividing_search

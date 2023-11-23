@@ -1,8 +1,9 @@
-#!/bin/bash
-if [[ -z ${APP_ROOT_PATH+1} ]];
+#!/usr/bin/env bash
+set -eo pipefail
+
+if [ -z "${PLATFORM_PATH}" ];
 then
-  source set_vars.sh
+  source "$(cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd)"/set_vars.sh
 fi
-set -e -o pipefail
-echo "${SC_MACHINE_PATH}"/scripts/build_kb.py 
-python3 "${SC_MACHINE_PATH}"/scripts/build_kb.py -c "${APP_ROOT_PATH}/ostis-geography.ini" -b "${APP_ROOT_PATH}"/bin "${@:-"${APP_ROOT_PATH}/repo.path"}"
+
+"${PLATFORM_PATH}/scripts/build_kb.sh" "$@"

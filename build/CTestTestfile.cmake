@@ -1,11 +1,11 @@
 # CMake generated Testfile for 
-# Source directory: /home/igor/labs/mois/kursach2sem/ostis-geography
-# Build directory: /home/igor/labs/mois/kursach2sem/ostis-geography/build
+# Source directory: /media/xxcreepsoxx/3CD04AE5D04AA4CC/GitRep/Ostis_example_app_080/ostis-example-app
+# Build directory: /media/xxcreepsoxx/3CD04AE5D04AA4CC/GitRep/Ostis_example_app_080/ostis-example-app/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-subdirs("problem-solver/cxx/sc-machine/thirdparty")
-subdirs("problem-solver/cxx/sc-machine/sc-memory")
-subdirs("problem-solver/cxx/sc-machine/sc-kpm")
-subdirs("problem-solver/cxx/sc-machine/sc-tools")
+subdirs("ostis-web-platform/sc-machine/thirdparty")
+subdirs("ostis-web-platform/sc-machine/sc-memory")
+subdirs("ostis-web-platform/sc-machine/sc-kpm")
+subdirs("ostis-web-platform/sc-machine/sc-tools")
 subdirs("problem-solver")

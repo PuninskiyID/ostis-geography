@@ -1,60 +1,48 @@
 services:
   web:
-    image: ostis/sc-web:latest
+    image: ostis/sc-web:0.8.0-Fusion
     build:
-      context: ./sc-web
-      dockerfile: ./Dockerfile
-    container_name: geo-sc-web
+      context: ./ostis-web-platform/sc-web
     restart: unless-stopped
     ports:
       - "8000:8000"
-    expose:
-      - 8000
     networks:
-      - geo
+      - sc-machine
     command:
-      - "--server-host=problem-solver"
+      - "--server-host=machine"
     depends_on:
-      problem-solver:
+      machine:
         condition: service_healthy
 
-  problem-solver:
-    image: geo-problem-solver
+  machine:
+    image: ostis/sc-machine:0.8.0-Fusion
     build:
       context: ./
-      dockerfile: ./Dockerfile
-    container_name: geo-problem-solver
     restart: unless-stopped
     volumes:
-      - ./kb:/ostis-geography/kb
+      - ./:/kb
       - kb-binary:/kb.bin
-      - ./repo.path:/ostis-geography/repo.path
-      - ./ostis-geography.ini:/ostis-geography/ostis-geography.ini
-      - ./problem-solver:/ostis-geography/problem-solver
     networks:
-      - geo
+      - sc-machine
     ports:
       - "8090:8090"
-    expose:
-      - 8090
     healthcheck:
-      test: "python3 /ostis-geography/problem-solver/cxx/sc-machine/scripts/healthcheck.py"
+      test: "python3 /example-app/ostis-web-platform/sc-machine/scripts/healthcheck.py"
       interval: 5s
       timeout: 10s
-      retries: 6
+      retries: 3
       start_period: 120s
     environment:
-      # Set REBUILD_KB env variable to 1 if you need to build KB every startup.
-      - "REBUILD_KB=1"
-      # Set REBUILD_PS env variable to 1 if you need to build problem solver every startup.
-      - "REBUILD_PS=0"
-      # Set FULL_REBUILD_PS env variable to 1 if you need to full build problem solver every startup (only if REBUILD_PS=1).
-      - "FULL_REBUILD_PS=0"
-      - "KB_PATH=../repo.path"
+      # Use the commented env variable if you need to rebuild KB every startup.
+      #- "REBUILD_KB=1"
+      - "KB_PATH=/kb/repo.path"
+      - "BINARY_PATH=/example-app/bin"
+      - "CONFIG_PATH=/kb/ostis-example-app.ini"
     command:
       - "serve"
+
 volumes:
   kb-binary: {}
 
 networks:
-  geo: {}
+  sc-machine: {}

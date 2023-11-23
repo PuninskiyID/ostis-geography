@@ -1,95 +1,103 @@
-## OSTIS-geography
-OSTIS-geography is an open-source knowledge base for geographical system for Open Semantic Technology for Intelligent Systems. System includes OpenStreetMap support to display geographical objects. 
-## Install
+<h1 align="center">OSTIS example app</h1>
 
-Clone the project
-```sh
-git clone -c core.longpaths=true -c core.autocrlf=true https://github.com/ostis-apps/ostis-geography
-cd ostis-geography
-git submodule update --init --recursive
-```
+[![license](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-### Using Ubuntu 22.04 or 20.04
-Linux:
+## About
+
+OSTIS example app is an ostis-system based on [**ostis-web-platform**](https://github.com/ostis-ai/ostis-web-platform) and designed with [OSTIS Technology](https://github.com/ostis-ai).
+
+0.8.0 version allows communication with the knowledge base via [JSON-based Websocket protocol](http://ostis-dev.github.io/sc-machine/http/websocket/).
+
+
+## Installation
+
+For Ubuntu/Debian based distros:
 ```sh
-cd scripts
-./install_project.sh
+git clone https://github.com/ostis-apps/ostis-example-app.git
+cd ostis-example-app
+./scripts/install.sh
 ```
 
 ## Build knowledge base
-If you are using the Docker version, just put your scs files in the "kb" folder and restart.
 
-For Linux:
+Before first launch or after changes in KB you should build knowledge base. 
+
 ```sh
-cd scripts
-./build_kb.sh
+./scripts/build_kb.sh
 ```
 
-## Run
-### Option 1. Run servers
+## Usage
 
-Run in Docker:
+To launch system you should start sc-server:
 ```sh
-docker-compose up
+./scripts/run_sc_server.sh
 ```
 
-Run on Linux:
+After that launch sc-web interface:
+
 ```sh
-#Terminal 1
-cd scripts
-./run_sc_server.sh
-#Terminal 2
-cd scripts
-./run_py_sc_server.sh
-#Terminal 3
-cd scripts
-./run_sc_web.sh
+./scripts/run_sc_web.sh
 ```
 
-Then open localhost:8000 in your browser.
+To check that everything is fine open localhost:8000 in your browser.
 ![](https://i.imgur.com/6SehI5s.png)
-
-You can open localhost:8090 in your browser as well to see the new web interface version.
-
-## Pull requests
-1. Add understandable title to the Pull Request which covers all changes in this Pull Request;
-2. Also, you can write this information inside Pull request;
-3. Don't forget about newline at the end of the file;
-4. Not necessary, but we will appreciate if you clean your commit history.
 
 ## Project Structure
 
-### kb
-The place for the knowledge base of your app. Put your **.scs** files here.
+### Knowledge Base
 
-### problem-solver
-The place for the problem solver of your app. Put your agents here.
+`kb` is the place for the knowledge base source text files of your app. Put your **.scs** and **.gwf** files here.
 
-#### Agents on C++
-Some tips:
-- Store your modules with C++ agents in *problem-solver/cxx*;
-- After updating your C++ code you need to rebuild problem-solver. Just run:
-```
-cd scripts
-./build_problem_solver.sh
-```
-For a full rebuild with the deleting of the *bin* and *build* folders run:
-```
-cd scripts
-./build_problem_solver.sh -f
-```
-and run:
-```
-cd scripts
-./run_sc_server.sh
+### Problem Solver
+
+`problem-solver` is the place for the problem solver of your app. Put your agents here. After changes in problem-solver you should rebuild it:
+
+*Use **scp_stable** branch for the development of agents on SCP.*  
+*Use **0.5.0**, **0.6.0**, **0.7.0** or **0.8.0** branch for the development of agents on C++. You can see an example module with a C++ agent [here](problem-solver/cxx/exampleModule/README.md)*  
+
+After updating your C++ code you need to rebuild `problem-solver`:  
+```sh
+./scripts/build_problem_solver.sh
 ```
 
-#### Agents on Python
-Some tips:
-- Store your modules with Python agents in *problem-solver/py*;
-- You can see example modules using Python [here](problem-solver/py/modules).
-- After updating your C++ code you need to rebuild problem-solver. Just run:
+To enable DEBUG set fields in ostis-example-app.ini:
+
+```sh
+log_type = Console
+log_file = sc-memory.log
+log_level = Debug
 ```
-cd scripts
-./run_py_sc_server.sh
-```
+
+### Interface
+
+`interface` is the place for your interface modules.
+
+To learn more about creating web components for the new web interface version follow this [link](https://github.com/MikhailSadovsky/sc-machine/tree/example/web/client)
+
+### Scripts
+
+`scripts` is the place for scripts files of your app. There are a few scripts already:
+
+* build_problem_solver.sh [-f, --full]
+
+Build the problem-solver of your app. Use an argument *-f* or *--full* for a complete rebuild of the problem-solver with the deleting of the *ostis-web-platform/sc-machine/bin* and *ostis-web-platform/sc-machine/build* folders.
+
+* install_submodules.sh
+
+Install or update the OSTIS platform.
+
+## Author
+
+* GitHub: [@ostis-apps](https://github.com/ostis-apps), [@ostis-ai](https://github.com/ostis-ai)
+
+## Show your support
+
+Give us a ⭐️ if you've liked this project!
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/ostis-apps/ostis-example-app/issues). 
+
+## 📝 License
+
+This project is [MIT](https://opensource.org/license/mit/) licensed.

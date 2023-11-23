@@ -1,6 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -eo pipefail
 
-source set_vars.sh
+if [ -z "${PLATFORM_PATH}" ];
+then
+  source "$(cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd)"/set_vars.sh
+fi
 
-"$APP_ROOT_PATH"/bin/sc-server -c "$APP_ROOT_PATH"/ostis-geography.ini "$@"
+"${PLATFORM_PATH}/scripts/run_sc_server.sh" "$@"

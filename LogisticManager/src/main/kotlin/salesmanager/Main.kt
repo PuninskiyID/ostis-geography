@@ -1,4 +1,0 @@
-package salesmanager
-
-class Main {
-}

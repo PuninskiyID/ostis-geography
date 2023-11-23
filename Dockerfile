@@ -1,16 +1,39 @@
-FROM ubuntu:focal
-ARG DEBIAN_FRONTEND=noninteractive
-ENV TZ=Europe/Minsk
-# install dependencies
-COPY ./scripts/install_deps_ubuntu.sh /tmp/install_deps_ubuntu.sh
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends sudo tzdata git && \
-    /tmp/install_deps_ubuntu.sh && \
-    apt-get install curl
+FROM ubuntu:focal as base
 
-WORKDIR /ostis-geography
+ENV CCACHE_DIR=/ccache
+USER root
+
+#install runtime dependencies
+COPY scripts /tmp/example-app/scripts
+COPY ostis-web-platform/scripts /tmp/example-app/ostis-web-platform/scripts
+COPY ostis-web-platform/sc-machine/scripts /tmp/example-app/ostis-web-platform/sc-machine/scripts
+COPY ostis-web-platform/sc-machine/requirements.txt /tmp/example-app/ostis-web-platform/sc-machine/requirements.txt
+
+# tini is an init system to forward interrupt signals properly
+RUN apt update && apt install -y --no-install-recommends sudo tini && \
+    /tmp/example-app/ostis-web-platform/sc-machine/scripts/install_deps_ubuntu.sh
+
+#build using ccache
+FROM base as devdeps
+RUN /tmp/example-app/ostis-web-platform/sc-machine/scripts/install_deps_ubuntu.sh --dev
+
+FROM devdeps as devcontainer
+RUN apt install -y --no-install-recommends git cppcheck valgrind gdb bash-completion ninja-build curl
+ENTRYPOINT ["/bin/bash"]
+
+FROM devdeps as builder
+WORKDIR /example-app
 COPY . .
-WORKDIR /ostis-geography/scripts
-RUN ./install_project.sh --no_build_kb --no_build_sc_web
+RUN --mount=type=cache,target=/ccache/ ./scripts/build_problem_solver.sh -r
 
-ENTRYPOINT ["bash", "/ostis-geography/scripts/docker_entrypoint.sh", "serve"]
+#Gathering all artifacts together
+FROM base AS final
+
+COPY --from=builder /example-app/ostis-web-platform/sc-machine/scripts /example-app/ostis-web-platform/sc-machine/scripts
+COPY --from=builder /example-app/ostis-example-app.ini /example-app/ostis-example-app.ini
+COPY --from=builder /example-app/bin /example-app/bin
+WORKDIR /example-app
+
+EXPOSE 8090
+
+ENTRYPOINT ["/usr/bin/tini", "--", "/example-app/ostis-web-platform/sc-machine/scripts/docker_entrypoint.sh"]

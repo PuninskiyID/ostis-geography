@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/igor/labs/mois/kursach2sem/ostis-geography/problem-solver
-# Build directory: /home/igor/labs/mois/kursach2sem/ostis-geography/build/problem-solver
+# Source directory: /media/xxcreepsoxx/3CD04AE5D04AA4CC/GitRep/Ostis_example_app_080/ostis-example-app/problem-solver
+# Build directory: /media/xxcreepsoxx/3CD04AE5D04AA4CC/GitRep/Ostis_example_app_080/ostis-example-app/build/problem-solver
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
