@@ -1,0 +1,25 @@
+Metallurg_Ice_Palace.scs <- concept_ice_arena;
+=> nrel_main_idtf:
+   [Metallurg Ice Palace]
+   (* <- lang_en;; <- name_en;;*);
+   [Ледовый дворец «Металлург»]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+
+=> nrel_region:
+   gomel_region;
+
+=> nrel_phone_number:
+   [375 23 345-09-42]
+   (* <- concept_phone_number;;*);
+
+=> nrel_address:
+   [ул. К.Маркса 3/1]
+   (*<-concept_address;;*);
+
+=> nrel_average_mark:
+   [4,7]
+   (*<-concept_average_mark;;*);
+
+=> nrel_capacity:
+   [2 018]
+   (*<-concept_capacity;;*);;

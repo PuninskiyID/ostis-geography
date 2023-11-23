@@ -1,0 +1,65 @@
+Vitebsk_Ice_Palace_of_Sport.scs <- concept_ice_arena;
+=> nrel_main_idtf:
+   [Vitebsk Ice Palace of Sport]
+   (* <- lang_en;; <- name_en;;*);
+   [Витебский ледовый дворец спорта]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+
+=> nrel_region:
+   vitebsk_region;
+
+=> nrel_phone_number:
+   [375 212 23-85-36]
+   (* <- concept_phone_number;;*);
+
+=> nrel_address:
+   [проспект Строителей 23]
+   (*<-concept_address;;*);
+=> nrel_average_mark:
+   [4,5]
+   (*<-concept_average_mark;;*);
+
+=> nrel_capacity:
+   [1 900]
+   (*<-concept_capacity;;*);
+
+=>nrel_open_time:
+    ..otime
+    (*<- sc_node;;*);
+
+=>nrel_close_time:
+    ..ctime
+    (*<- sc_node;;*);;
+
+
+..otime <- concept_open_time;
+    	<- ..hour1 ;
+    	<- ..minute1 ;;
+    	
+..ctime <- concept_close_time;
+    	<- ..hour2 ;
+    	<- ..minute2 ;;
+
+..hour1
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    8
+    	(* <- concept_number;;*);;
+
+..minute1
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    30
+    	(* <- concept_number;;*);;
+
+..hour2
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    21
+    	(* <- concept_number;;*);;
+
+..minute2
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    30
+    	(* <- concept_number;;*);;

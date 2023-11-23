@@ -1,0 +1,44 @@
+fire_rescue_unit_N7_gomel <- concept_fire_station;
+=> nrel_main_idtf:
+   [FRU №7 (Gomel)]
+   (* <- lang_en;; <- name_en;;*);
+   [ПАСЧ №7 (Гомель)]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+=> nrel_address:
+    [Гомель, Объездная ул., 9]
+    (*<-concept_address;;*);
+=> nrel_geographical_coordinates:
+    ..coordinates  
+    (*<- sc_node;;*);
+=> nrel_phone_number:
+   [+375 23 223-43-70]
+   (* <- concept_phone_number;;*);
+=> nrel_region:
+   gomel_region;;
+
+
+..coordinates <- concept_geographical_coordinates;
+    <- ..latitude ;
+    <- ..longitude ;;
+   
+..latitude 
+<- concept_latitude;
+=> nrel_measurement_in_degrees:
+    52.421139
+    	(* <- concept_number;;*);;
+    	
+..longitude 
+<- concept_longitude;
+=> nrel_measurement_in_degrees:
+    30.888413
+    	(* <- concept_number;;*);;
+    	
+sc_node_class 
+->52.421139;
+->30.888413;;
+   
+   
+
+   
+   
+ 

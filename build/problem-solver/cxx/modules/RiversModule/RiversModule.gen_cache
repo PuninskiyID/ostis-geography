@@ -1,0 +1,8 @@
+/home/igor/labs/mois/kursach2sem/ostis-geography/problem-solver/cxx/modules/RiversModule/RiversModule.hpp|c497bc3dd70a15bde1d59ee1421e780f87a0dce9e21e41538c2f52ddaf6d88d9
+/home/igor/labs/mois/kursach2sem/ostis-geography/problem-solver/cxx/modules/RiversModule/agents/LongerRiver.hpp|de14fc1b3bfa7fc757c4c12983730215aeac3d7bc1014ed8026751a53173ff95
+/home/igor/labs/mois/kursach2sem/ostis-geography/problem-solver/cxx/modules/RiversModule/agents/LongestInRegion.hpp|286faf19cfac19d08f64f5d90580498ec90ca4d336ad0a0be613f63828642c85
+/home/igor/labs/mois/kursach2sem/ostis-geography/problem-solver/cxx/modules/RiversModule/agents/TheBiggestBasinInRegion.hpp|32c539b527977e33168c2ed7d13fa258545d2d957e3ec081ac487dffe3350d3c
+/home/igor/labs/mois/kursach2sem/ostis-geography/problem-solver/cxx/modules/RiversModule/agents/BiggerBasin.hpp|7dc5c43a186166918070b877f009561d5321e1c1e6f853f2e860899eb3c55d11
+/home/igor/labs/mois/kursach2sem/ostis-geography/problem-solver/cxx/modules/RiversModule/agents/ShorterRiver.hpp|6ec3fb86ac05b8d60cc937abbdba8b9cb646111aae1cda2e79e1d2e29e8f4b83
+/home/igor/labs/mois/kursach2sem/ostis-geography/problem-solver/cxx/modules/RiversModule/keynodes/keynodes.hpp|c3f928b5263743186f2724178244cf62dba4fc6f549bcb559687997f086eda53
+/home/igor/labs/mois/kursach2sem/ostis-geography/bin/sc-code-generator|694265264ab35216b210d10b174b678c22a3cfb88c7b0f3013b4ede1f94094f3

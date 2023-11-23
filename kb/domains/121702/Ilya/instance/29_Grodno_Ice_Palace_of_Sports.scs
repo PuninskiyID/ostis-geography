@@ -1,0 +1,66 @@
+Grodno_Ice_Palace_of_Sports.scs <- concept_ice_arena;
+=> nrel_main_idtf:
+   [Grodno Ice Palace of Sports]
+   (* <- lang_en;; <- name_en;;*);
+   [гродненский ледовый дворец спорта]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+
+=> nrel_region:
+   grodno_region;
+
+=> nrel_phone_number:
+   [375 15 260-37-62]
+   (* <- concept_phone_number;;*);
+
+=> nrel_address:
+   [Коммунальная ул., 3А]
+   (*<-concept_address;;*);
+
+=> nrel_capacity:
+   [2 487]
+   (*<-concept_capacity;;*);
+
+=> nrel_average_mark:
+   [4,6]
+   (*<-concept_average_mark;;*);
+
+=>nrel_open_time:
+    ..otime
+    (*<- sc_node;;*);
+
+=>nrel_close_time:
+    ..ctime
+    (*<- sc_node;;*);;
+
+
+..otime <- concept_open_time;
+    	<- ..hour1 ;
+    	<- ..minute1 ;;
+    	
+..ctime <- concept_close_time;
+    	<- ..hour2 ;
+    	<- ..minute2 ;;
+
+..hour1
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    8
+    	(* <- concept_number;;*);;
+
+..minute1
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    30
+    	(* <- concept_number;;*);;
+
+..hour2
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    17
+    	(* <- concept_number;;*);;
+
+..minute2
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    30
+    	(* <- concept_number;;*);;

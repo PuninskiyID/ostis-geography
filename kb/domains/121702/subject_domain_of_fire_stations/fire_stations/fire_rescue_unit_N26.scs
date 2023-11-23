@@ -1,0 +1,39 @@
+fire_rescue_unit_N26 <- concept_fire_station;
+=> nrel_main_idtf:
+   [FRU №26]
+   (* <- lang_en;; <- name_en;;*);
+   [ПАСЧ №26]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+=> nrel_address:
+    [г.Минск улица Притыцкого, 64Б]
+    (*<-concept_address;;*);
+=> nrel_geographical_coordinates:
+    ..coordinates  
+    (*<- sc_node;;*);
+=> nrel_phone_number:
+   [+375 17 363-60-73]
+   (* <- concept_phone_number;;*);
+=> nrel_region:
+   minsk_region;;
+
+..coordinates <- concept_geographical_coordinates;
+    <- ..latitude ;
+    <- ..longitude ;;
+   
+..latitude 
+<- concept_latitude;
+=> nrel_measurement_in_degrees:
+    53.912540
+    	(* <- concept_number;;*);;
+    	
+..longitude 
+<- concept_longitude;
+=> nrel_measurement_in_degrees:
+    27.460352
+    	(* <- concept_number;;*);;
+    	
+sc_node_class 
+->53.912540;
+->27.460352;;
+   
+   

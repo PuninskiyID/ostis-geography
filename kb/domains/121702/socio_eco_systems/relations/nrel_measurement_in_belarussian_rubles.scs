@@ -1,0 +1,64 @@
+nrel_measurement_in_belarussian_rubles
+<-sc_node_norole_relation;
+<-relation;
+<-binary_relation;
+<-oriented_relation;
+<-antireflexive_relation;
+<-antitransitive_relation;
+<-asymmetric_relation;
+=>nrel_main_idtf:
+	[измерение в белорусских рублях*]
+	(* <- lang_ru;; *);
+	[measurement_in_belarussian_rubles*]
+	(* <- lang_en;; *);
+=>nrel_first_domain: concept_average_bill;
+=>nrel_first_domain: concept_voucher_price;
+=>nrel_second_domain: concept_number;
+=>nrel_definitional_domain:
+	...
+	(*
+	<= nrel_combination:
+		{
+		concept_average_bill;
+		concept_number
+		};;
+	*);
+=>nrel_definitional_domain:
+	...
+	(*
+	<= nrel_combination:
+		{
+		concept_voucher_price;
+		concept_number
+		};;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (измерение в белорусских рублях)]
+		(* <- lang_ru;; *);
+		[Def. (measurement in belarussian rubles)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Измерение в белорусских рублях* — бинарное отношение, связывающее среднюю стоимость с числом.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Measurement_in_belarussian_rubles* - a binary relation that connects an average price with the number.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+            concept_number;
+	      concept_average_bill;
+		concept_voucher_price;
+            binary_relation
+		};;
+	*);;

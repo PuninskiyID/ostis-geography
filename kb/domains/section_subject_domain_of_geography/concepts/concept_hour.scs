@@ -1,0 +1,35 @@
+concept_hour
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[час]
+	(* <- lang_ru;; *);
+	[hour]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (Час)]
+		(* <- lang_ru;; *);
+		[Def. (hour)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Час - единица измерения времени, равная 60 минутам.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Latitude is a unit of time equal to 60 minutes.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_hour
+		};;
+	*);;
+

@@ -1,0 +1,42 @@
+fire_rescue_unit_N3_v <- concept_fire_station;
+=> nrel_main_idtf:
+   [FRU №3 (Vitebsk)]
+   (* <- lang_en;; <- name_en;;*);
+   [ПАСЧ №3 (Витебск)]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+=> nrel_address:
+    [Витебск, ул. Максима Горького, 44]
+    (*<-concept_address;;*);
+=> nrel_geographical_coordinates:
+    ..coordinates  
+    (*<- sc_node;;*);
+=> nrel_phone_number:
+   [+375 21 237-30-54]
+   (* <- concept_phone_number;;*);
+=> nrel_region:
+   vitebsk_region;;
+
+
+..coordinates <- concept_geographical_coordinates;
+    <- ..latitude ;
+    <- ..longitude ;;
+   
+..latitude 
+<- concept_latitude;
+=> nrel_measurement_in_degrees:
+    55.171815
+    	(* <- concept_number;;*);;
+    	
+..longitude 
+<- concept_longitude;
+=> nrel_measurement_in_degrees:
+    30.167558
+    	(* <- concept_number;;*);;
+    	
+sc_node_class 
+->55.171815;
+->30.167558;;
+   
+   
+   
+ 

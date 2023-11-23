@@ -1,0 +1,64 @@
+nrel_measurement_in_degrees
+<-sc_node_norole_relation;
+<-relation;
+<-binary_relation;
+<-oriented_relation;
+<-antireflexive_relation;
+<-antitransitive_relation;
+<-asymmetric_relation;
+=>nrel_main_idtf:
+	[измерение в градусах*]
+	(* <- lang_ru;; *);
+	[measurment_in_degrees*]
+	(* <- lang_en;; *);
+=>nrel_first_domain: concept_latitude;
+=>nrel_first_domain: concept_longitude;
+=>nrel_second_domain: concept_number;
+=>nrel_definitional_domain:
+	...
+	(*
+	<= nrel_combination:
+		{
+		concept_latitude;
+		concept_number
+		};;
+	*);
+=>nrel_definitional_domain:
+	...
+	(*
+	<= nrel_combination:
+		{
+		concept_longitude;
+		concept_number
+		};;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (измерение в градусах)]
+		(* <- lang_ru;; *);
+		[Def. (measurment in degrees)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Измерение в градусах* — бинарное отношение, связывающее географические координаты с числом.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Measurment_in_degrees* - a binary relation that connects an geographical coordinates with number.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+            concept_number;
+	    concept_latitude;
+	    concept_longitude;
+            binary_relation
+		};;
+	*);;

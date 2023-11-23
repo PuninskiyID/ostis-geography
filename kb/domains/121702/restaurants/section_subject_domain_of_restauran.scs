@@ -1,0 +1,57 @@
+section_subject_domain_of_restaurant
+=> nrel_main_idtf:
+	[Раздел. Предметная область рестораны]
+   (* <- lang_ru;; *);
+	[Section. Subject domain of restaurant] 
+   (* <- lang_en;; *);
+<- atomic_section;;
+
+
+	subject_domain_of_restaurant
+<- sc_node_struct;
+	=> nrel_main_idtf:
+      [Предметная область рестораны]
+      (* <- lang_ru;; *);
+      [Subject domain of restaurant]
+      (* <- lang_en;; *);
+	<- subject_domain;
+	-> rrel_maximum_studied_object_class:
+            concept_restaurant;
+	-> rrel_not_maximum_studied_object_class:
+            concept_address;
+	      concept_phone_number;
+	      concept_close_time;
+	      concept_open_time;
+	      concept_city_district;
+		concept_average_bill;
+		concept_average_attendance_of_the_institution;
+		concept_restaurant_type;
+	-> rrel_explored_relation:
+            nrel_close_time;
+            nrel_open_time;
+            nrel_phone_number;
+            nrel_address;
+            nrel_measurement_in_belarussian_rubles;
+            nrel_restaurant_type;
+            nrel_city_district;;
+
+
+section_subject_domain_of_restaurant
+-> rrel_key_sc_element:
+	subject_domain_of_restaurant;
+	concept_restaurant;
+	concept_phone_number;
+	concept_close_time;
+	concept_open_time;
+	concept_address;
+	concept_average_bill;
+	concept_city_district;
+	concept_average_attendance_of_the_institution;
+	concept_restaurant_type;
+	nrel_open_time;
+	nrel_address;
+	nrel_close_time;
+	nrel_measurement_in_belarussian_rubles;
+	nrel_restaurant_type;
+	nrel_phone_number;
+	nrel_city_district;;

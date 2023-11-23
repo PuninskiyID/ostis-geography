@@ -1,0 +1,45 @@
+training_fire_rescue_unit_gomel <- concept_fire_station;
+=> nrel_main_idtf:
+   [TFRU (Gomel)]
+   (* <- lang_en;; <- name_en;;*);
+   [УПАСЧ (Гомель)]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+=> nrel_address:
+    [Гомель, Речицкий просп., 35А/14]
+    (*<-concept_address;;*);
+=> nrel_geographical_coordinates:
+    ..coordinates  
+    (*<- sc_node;;*);
+=> nrel_phone_number:
+   [-]
+   (* <- concept_phone_number;;*);
+=> nrel_region:
+   gomel_region;;
+
+
+..coordinates <- concept_geographical_coordinates;
+    <- ..latitude ;
+    <- ..longitude ;;
+   
+..latitude 
+<- concept_latitude;
+=> nrel_measurement_in_degrees:
+    52.415565
+    	(* <- concept_number;;*);;
+    	
+..longitude 
+<- concept_longitude;
+=> nrel_measurement_in_degrees:
+    30.942157
+    	(* <- concept_number;;*);;
+    	
+sc_node_class 
+->52.415565;
+->30.942157;;
+   
+
+  
+
+   
+   
+ 

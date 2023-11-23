@@ -1,0 +1,35 @@
+concept_latitude
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[широта]
+	(* <- lang_ru;; *);
+	[latitude]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (широта)]
+		(* <- lang_ru;; *);
+		[Def. (latitude)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Широта - это расстояние от экватора по меридиану, выражаемое в градусах.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Latitude is distance from the equator along the meridian, expressed in degrees.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_latitude
+		};;
+	*);;
+

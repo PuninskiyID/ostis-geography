@@ -1,0 +1,53 @@
+nrel_measurement_in_hours
+<-sc_node_norole_relation;
+<-relation;
+<-binary_relation;
+<-oriented_relation;
+<-antireflexive_relation;
+<-antitransitive_relation;
+<-asymmetric_relation;
+=>nrel_main_idtf:
+	[измерение в часах*]
+	(* <- lang_ru;; *);
+	[measurement in hours*]
+	(* <- lang_en;; *);
+=>nrel_first_domain: concept_hour;
+=>nrel_second_domain: concept_number;
+=>nrel_definitional_domain:
+	...
+	(*
+	<= nrel_combination:
+		{
+		concept_hour;
+		concept_number
+		};;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (измерение в часах)]
+		(* <- lang_ru;; *);
+		[Def. (measurement in hours)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Измерение в часах* — бинарное отношение, связывающее кол-во часов с числом.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Measurement in hours* — a binary relation that connects an amount of hours with the number.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+              concept_number;
+	      concept_hour;
+            binary_relation
+		};;
+	*);;

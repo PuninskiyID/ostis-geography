@@ -1,0 +1,36 @@
+concept_close_time
+<- sc_node_class;
+=> nrel_main_idtf:
+	[время закрытия]
+	(* <- lang_ru;; *);
+	[close time]
+	(* <- lang_en;; *);
+=>nrel_system_identifier:
+	[concept_close_time];
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (время закрытия)]
+		(* <- lang_ru;; *);
+		[Def. (close time]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Время закрытия - момент времени, указанный в расписании, когда заведение или учреждение приостанавливает приём посетителей.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Close time - the point in time specified in the schedule when the establishment or institution suspends the receiving of visitors.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_close_time
+		};;
+	*);;

@@ -1,0 +1,45 @@
+fire_rescue_unit_N6_gomel <- concept_fire_station;
+=> nrel_main_idtf:
+   [FRU №6 (Gomel)]
+   (* <- lang_en;; <- name_en;;*);
+   [ПАСЧ №6 (Гомель)]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+=> nrel_address:
+    [Гомель, ул. Михаила Ломоносова, 27/1]
+    (*<-concept_address;;*);
+=> nrel_geographical_coordinates:
+    ..coordinates  
+    (*<- sc_node;;*);
+=> nrel_phone_number:
+   [-]
+   (* <- concept_phone_number;;*);
+=> nrel_region:
+   gomel_region;;
+
+
+..coordinates <- concept_geographical_coordinates;
+    <- ..latitude ;
+    <- ..longitude ;;
+   
+..latitude 
+<- concept_latitude;
+=> nrel_measurement_in_degrees:
+    52.534834
+    	(* <- concept_number;;*);;
+    	
+..longitude 
+<- concept_longitude;
+=> nrel_measurement_in_degrees:
+    30.918564
+    	(* <- concept_number;;*);;
+    	
+sc_node_class 
+->52.534834;
+->30.918564;;
+   
+
+   
+
+   
+   
+ 

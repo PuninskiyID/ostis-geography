@@ -1,0 +1,17 @@
+CSC_Orshanskiy.scs <- concept_football_stadium;
+=> nrel_main_idtf:
+   [CSC Orshanskiy]
+   (* <- lang_en;; <- name_en;;*);
+   [ЦСК Оршанский]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+
+=> nrel_region:
+   vitebsk_region;
+
+=> nrel_address:
+   [ул.Ленина,39]
+   (*<-concept_address;;*);
+
+=> nrel_capacity:
+   [2 500]
+   (*<-concept_capacity;;*);;

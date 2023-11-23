@@ -1,0 +1,67 @@
+ OC_Energy_sanatorium <- concept_sanatorium;
+=> nrel_main_idtf:
+   [OC_Energy]
+   (* <- lang_en;; <- name_en;;*);
+   [ОЦ Энергия]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+=>nrel_open_time:
+    ..otime
+    (*<-sc_node;;*);
+=>nrel_close_time:
+    ..ctime
+    (*<-sc_node;;*);
+=> nrel_phone_number:
+   [8 044 778-70-14]
+   (* <- concept_phone_number;;*);
+=> nrel_region:
+   [Minsk]
+   (* <- concept_region;;*);
+=> nrel_address:
+   [к.п, Нарач 222395]
+   (* <- concept_address;;*);
+
+=> nrel_sanatorium_type:
+   [sports_sanatorium]
+   (* <- concept_sanatorium_type;;*);
+
+=>nrel_average_attendance_during_the_best_seson:
+    ..avatt
+    (*<- sc_node;;*);;
+   
+..otime <- concept_open_time;
+    	<- ..hour1 ;
+    	<- ..minute1 ;;
+    	
+..ctime <- concept_close_time;
+    	<- ..hour2 ;
+    	<- ..minute2 ;;
+
+..hour1
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    8
+      (* <- concept_number;;*);;
+
+..minute1
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    0
+      (* <- concept_number;;*);;
+
+..hour2
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    6
+      (* <- concept_number;;*);;
+
+..minute2
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    0
+      (* <- concept_number;;*);;
+      
+..avatt 
+<- concept_rating;
+=>nrel_rating:
+	200
+    (* <- concept_number;;*);;

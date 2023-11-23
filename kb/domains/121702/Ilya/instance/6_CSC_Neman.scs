@@ -1,0 +1,21 @@
+CSC_Neman.scs <- concept_football_stadium;
+=> nrel_main_idtf:
+   [CSC Neman]
+   (* <- lang_en;; <- name_en;;*);
+   [ЦСК Нёман]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+
+=> nrel_region:
+   grodno_region;
+
+=> nrel_phone_number:
+   [375 15 277-09-71]
+   (* <- concept_phone_number;;*);
+
+=> nrel_address:
+   [ул.Гагарина,16]
+   (*<-concept_address;;*);
+
+=> nrel_capacity:
+   [8 479]
+   (*<-concept_capacity;;*);;

@@ -1,0 +1,52 @@
+nrel_water_balance
+<-sc_node_norole_relation;
+<-relation;
+<-binary_relation;
+<-oriented_relation;
+<-antireflexive_relation;
+<-antitransitive_relation;
+<-asymmetric_relation;
+=>nrel_main_idtf:
+	[водный баланс]
+	(* <- lang_ru;; *);
+	[water balance]
+	(* <- lang_en;; *);
+=>nrel_first_domain: concept_lake;
+=>nrel_second_domain: concept_water_balance;
+=>nrel_definitional_domain:
+	...
+	(*
+	<= nrel_combination:
+		{
+		concept_lake;
+		concept_water_balance
+		};;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (водный баланс)]
+		(* <- lang_ru;; *);
+		[Def. (water balance)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[водный баланс* - бинарное отношение, связывающее озеро и вид водного баланса.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[water balance* - a binary relation that connects a lake and type of water balance.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+            concept_lake;
+		    concept_water_balance
+		};;
+	*);;

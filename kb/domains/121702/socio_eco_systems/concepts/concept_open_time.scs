@@ -1,0 +1,36 @@
+concept_open_time
+<- sc_node_class;
+=> nrel_main_idtf:
+	[время открытия]
+	(* <- lang_ru;; *);
+	[open time]
+	(* <- lang_en;; *);
+=>nrel_system_identifier:
+	[concept_open_time];
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (время открытия)]
+		(* <- lang_ru;; *);
+		[Def. (open time)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Время открытия - момент времени, указанный в расписании, когда заведение или учреждение возобновляет прием посетителей.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Open time - the point in time specified in the schedule when the establishment or institution resumes receiving visitors.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_open_time
+		};;
+	*);;

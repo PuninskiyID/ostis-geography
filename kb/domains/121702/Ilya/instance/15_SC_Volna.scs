@@ -1,0 +1,21 @@
+SC_Volna.scs <- concept_football_stadium;
+=> nrel_main_idtf:
+   [SC Volna]
+   (* <- lang_en;; <- name_en;;*);
+   [СК Волна]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+
+=> nrel_region:
+   brest_region;
+
+=> nrel_phone_number:
+   [375 29 692-72-52]
+   (* <- concept_phone_number;;*);
+
+=> nrel_address:
+   [Микрорайон Альбрехтово]
+   (*<-concept_address;;*);
+
+=> nrel_capacity:
+   [3 136]
+   (*<-concept_capacity;;*);;

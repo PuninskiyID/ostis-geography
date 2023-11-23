@@ -1,0 +1,34 @@
+concept_average_attendance_of_the_institution
+<- sc_node_class;
+=> nrel_main_idtf:
+	[средняя посещаемость заведения]
+	(* <- lang_ru;; *);
+	[average attendance of the institution]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (средняя посещаемость заведения)]
+		(* <- lang_ru;; *);
+		[Def. (average attendance of the institution)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Средняя посещаемость заведения - это среднее количество посетителей, которое приходит в это заведение за день.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[The average attendance of an institution - the average number of visitors who come to this institution per day.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_average_attendance_of_the_institution
+		};;
+	*);;

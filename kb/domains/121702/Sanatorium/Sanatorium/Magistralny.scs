@@ -1,0 +1,67 @@
+ Magistrelny_sanatorium <- concept_sanatorium;
+=> nrel_main_idtf:
+   [Magistrelny]
+   (* <- lang_en;; <- name_en;;*);
+   [Магистральный]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+=>nrel_open_time:
+    ..otime
+    (*<-sc_node;;*);
+=>nrel_close_time:
+    ..ctime
+    (*<-sc_node;;*);
+=> nrel_phone_number:
+   [8 016 347-07-90]
+   (* <- concept_phone_number;;*);
+=> nrel_region:
+   [Brest]
+   (* <- concept_region;;*);
+=> nrel_address:
+   [ул. Гаевая 61, Барановичи]
+   (* <- concept_address;;*);
+
+=> nrel_sanatorium_type:
+   [Therapeutic_and_recreational_sanatorium]
+   (* <- concept_restaurant_type;;*);
+   
+=>nrel_average_attendance_during_the_best_seson:
+    ..avatt
+    (*<- sc_node;;*);;
+   
+..otime <- concept_open_time;
+    	<- ..hour1 ;
+    	<- ..minute1 ;;
+    	
+..ctime <- concept_close_time;
+    	<- ..hour2 ;
+    	<- ..minute2 ;;
+
+..hour1
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    7
+      (* <- concept_number;;*);;
+
+..minute1
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    30
+      (* <- concept_number;;*);;
+
+..hour2
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    22
+      (* <- concept_number;;*);;
+
+..minute2
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    40
+      (* <- concept_number;;*);;
+      
+..avatt 
+<- concept_rating;
+=>nrel_rating:
+	230
+    (* <- concept_number;;*);;

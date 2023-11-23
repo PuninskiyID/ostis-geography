@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -g -DSC_DEBUG -DSC_PROFILE  -shared -Wl,-soname,libsc-kpm-common.so -o ../../../../../../bin/libsc-kpm-common.so CMakeFiles/sc-kpm-common.dir/sc_keynodes.c.o  -Wl,-rpath,/home/igor/labs/mois/kursach2sem/ostis-geography/bin ../../../../../../bin/libsc-core.so -Wl,--export-dynamic -lgmodule-2.0 -pthread -lglib-2.0 

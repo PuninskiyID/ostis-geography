@@ -1,0 +1,42 @@
+fire_rescue_unit_N5_grodno <- concept_fire_station;
+=> nrel_main_idtf:
+   [FRU №5 (Grodno)]
+   (* <- lang_en;; <- name_en;;*);
+   [ПАСЧ №5 (Гродно)]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+=> nrel_address:
+    [Гродно, ул. Славинского, 4А]
+    (*<-concept_address;;*);
+=> nrel_geographical_coordinates:
+    ..coordinates  
+    (*<- sc_node;;*);
+=> nrel_phone_number:
+   [-]
+   (* <- concept_phone_number;;*);
+=> nrel_region:
+   grodno_region;;
+
+
+..coordinates <- concept_geographical_coordinates;
+    <- ..latitude ;
+    <- ..longitude ;;
+   
+..latitude 
+<- concept_latitude;
+=> nrel_measurement_in_degrees:
+    53.640638
+    	(* <- concept_number;;*);;
+    	
+..longitude 
+<- concept_longitude;
+=> nrel_measurement_in_degrees:
+    23.817248
+    	(* <- concept_number;;*);;
+    	
+sc_node_class 
+->53.640638;
+->23.817248;;
+   
+
+   
+ 

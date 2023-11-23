@@ -1,0 +1,34 @@
+concept_gym
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[Тренаажерный зал]
+	(* <- lang_ru;; *);
+	[Gym]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (тренажерный зал)]
+		(* <- lang_ru;; *);
+		[Def. (gum)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Тренажерный зал - спортивный комплекс, оборудованный тренажерами для занятия спортом.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Gym - a sports complex equipped with exercise equipment for sports.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_gym
+		};;
+	*);;

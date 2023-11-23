@@ -1,0 +1,58 @@
+Gorka_Ice_Arena.csc <- concept_ice_arena;
+=> nrel_main_idtf:
+   [Gorka Ice Arena]
+   (* <- lang_en;; <- name_en;;*);
+   [Ледовая арена в Горках]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+
+=> nrel_region:
+   vitebsk_region;
+
+=> nrel_phone_number:
+   [375 22 33-79-995]
+   (* <- concept_phone_number;;*);
+   
+=> nrel_average_mark:
+   [4,2]
+   (*<-concept_average_mark;;*);
+
+=>nrel_open_time:
+    ..otime
+    (*<- sc_node;;*);
+
+=>nrel_close_time:
+    ..ctime
+    (*<- sc_node;;*);;
+
+
+..otime <- concept_open_time;
+    	<- ..hour1 ;
+    	<- ..minute1 ;;
+    	
+..ctime <- concept_close_time;
+    	<- ..hour2 ;
+    	<- ..minute2 ;;
+
+..hour1
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    8
+    	(* <- concept_number;;*);;
+
+..minute1
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    0
+    	(* <- concept_number;;*);;
+
+..hour2
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    21
+    	(* <- concept_number;;*);;
+
+..minute2
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    0
+    	(* <- concept_number;;*);;

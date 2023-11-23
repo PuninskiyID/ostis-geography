@@ -1,0 +1,35 @@
+concept_fire_station
+<-sc_node_class;
+=>nrel_main_idtf:
+	[пожарная часть]
+	(* <- lang_ru;; *);
+	[fire_station]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (пожарная часть)]
+		(* <- lang_ru;; *);
+		[Def. (fire station)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Пожарная часть - основное подразделение пожарной охраны, создаваемое в установленном законом порядке для профилактики и тушения пожаров на территории населённых пунктов и объектах.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Fire station is the main unit of the fire department, created in accordance with the law for the prevention and suppression of fires in populated areas and facilities.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_fire_station
+		};;
+	*);;
+

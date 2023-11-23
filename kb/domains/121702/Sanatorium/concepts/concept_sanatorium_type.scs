@@ -1,0 +1,35 @@
+concept_sanatorium_type
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[вид санатория]
+	(* <- lang_ru;; *);
+	[sanatorium type]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (вид санатория)]
+		(* <- lang_ru;; *);
+		[Def. (sanatorium type)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Вид санатория - это параметр характеризующий специализацию и направленность санатория.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Sanatorium type is it is a parameter characterizing the specialization and orientation of the sanatorium.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_sanatorium_type
+		};;
+	*);;
+

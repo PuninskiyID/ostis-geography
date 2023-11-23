@@ -1,0 +1,13 @@
+# Change start page
+!./kb/ims.ostis.kb/ui/menu/ui_main_menu.scs
+!./kb/ims.ostis.kb/ims/knowledge_base_IMS.scs
+
+#components
+kb/ims.ostis.kb
+kb/ui_menu
+kb/tests
+kb/domains
+problem-solver/py/modules/
+problem-solver/cxx/modules/
+interface/
+ostis-osm/

@@ -1,0 +1,12 @@
+coverage:
+  status:
+    project:
+      default:
+        target: 75%
+        threshold: null
+    patch: false
+    changes: false
+  ignore:
+    - "*/utils/sc_console.*"
+    - "*/utils/sc_message.*"
+    - "*/utils/sc_progress.*"

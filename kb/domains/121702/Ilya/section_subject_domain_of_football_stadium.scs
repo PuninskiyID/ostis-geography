@@ -1,0 +1,41 @@
+section_subject_domain_of_football_stadium
+=> nrel_main_idtf:
+	[Раздел. Предметная область футбольных стадионов Беларуси]
+   (* <- lang_ru;; *);
+	[Section. Subject domain of football stadiums of Belarus] 
+   (* <- lang_en;; *);
+<- atomic_section;;
+
+section_subject_domain_of_football_stadium = [*
+	subject_domain_of_football_stadium
+<- sc_node_struct;
+	=> nrel_main_idtf:
+      [Предметная область футбольных стадионов Беларуси]
+      (* <- lang_ru;; *);
+      [Subject domain of football stadiums of Belarus]
+      (* <- lang_en;; *);
+	<- subject_domain;
+	-> rrel_maximum_studied_object_class:
+            concept_football_stadium;     
+            concept_capacity;
+            concept_visitor;
+			concept_open_time;
+        	concept_hour;
+	-> rrel_explored_relation:
+	        nrel_close_time;
+        	nrel_open_time;
+            nrel_address;
+			nrel_capacity;
+            nrel_phone_number;;
+*];;
+
+section_subject_domain_of_football_stadium
+-> rrel_key_sc_element:
+			concept_hour;
+			nrel_open_time;
+			nrel_close_time;
+			concept_capacity;
+			concept_visitor;
+			concept_football_stadium;
+			concept_phone_number;
+			nrel_capacity;;

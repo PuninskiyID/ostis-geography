@@ -1,0 +1,62 @@
+Torpedo_stadium.scs <- concept_football_stadium;
+=> nrel_main_idtf:
+   [Torpedo stadium]
+   (* <- lang_en;; <- name_en;;*);
+   [Стадион Торпедо]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+
+=> nrel_region:
+   minsk_region;
+
+=> nrel_phone_number:
+   [375 15 753-69-38]
+   (* <- concept_phone_number;;*);
+
+=> nrel_address:
+   [ул.Деревянко,5]
+   (*<-concept_address;;*);
+
+=> nrel_capacity:
+   [6 524]
+   (*<-concept_capacity;;*);
+
+=>nrel_open_time:
+    ..otime
+    (*<- sc_node;;*);
+
+=>nrel_close_time:
+    ..ctime
+    (*<- sc_node;;*);;
+
+
+..otime <- concept_open_time;
+    	<- ..hour1 ;
+    	<- ..minute1 ;;
+    	
+..ctime <- concept_close_time;
+    	<- ..hour2 ;
+    	<- ..minute2 ;;
+
+..hour1
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    7
+    	(* <- concept_number;;*);;
+
+..minute1
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    0
+    	(* <- concept_number;;*);;
+
+..hour2
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    22
+    	(* <- concept_number;;*);;
+
+..minute2
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    0
+    	(* <- concept_number;;*);;

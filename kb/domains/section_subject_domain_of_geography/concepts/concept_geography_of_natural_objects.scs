@@ -1,0 +1,35 @@
+concept_geography_of_natural_objects
+<-sc_node_class;
+=>nrel_main_idtf:
+	[география природных объектов]
+	(* <- lang_ru;; *);
+	[geography of natural objects]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (география природных объектов)]
+		(* <- lang_ru;; *);
+		[Def. (geography of natural objects)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[География природных объектов - раздел географии изучающий различные свойства объектов природного происхождения.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Geography of natural objects is a section of geography that studies various properties of objects of natural origin.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_geography_of_natural_objects
+		};;
+	*);;
+

@@ -1,0 +1,17 @@
+Youth_stadium.scs <- concept_football_stadium;
+=> nrel_main_idtf:
+   [Youth stadium]
+   (* <- lang_en;; <- name_en;;*);
+   [Стадион Юность]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+
+=> nrel_region:
+   grodno_region;
+
+=> nrel_address:
+   [Слоним]
+   (*<-concept_address;;*);
+
+=> nrel_capacity:
+   [2 220]
+   (*<-concept_capacity;;*);;

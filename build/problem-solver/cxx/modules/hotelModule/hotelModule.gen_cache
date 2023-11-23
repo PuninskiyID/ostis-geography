@@ -1,0 +1,6 @@
+/home/igor/labs/mois/kursach2sem/ostis-geography/problem-solver/cxx/modules/hotelModule/templates/HotelTemplates.hpp|94368c65df573722e08d8cba9e6eaa34091f8dc3a84fd46b7658be84eadf7476
+/home/igor/labs/mois/kursach2sem/ostis-geography/problem-solver/cxx/modules/hotelModule/keynodes/HotelKeynodes.hpp|02a81ae729742c8e4b91daefd208990e2f507a5d207a200445c1952405e31246
+/home/igor/labs/mois/kursach2sem/ostis-geography/problem-solver/cxx/modules/hotelModule/agent/GetHotelByMinPricePerNightAgent.hpp|6f02189a807759de8bf0989f7134314b259a7d3f3a46e65da1319ee45114af67
+/home/igor/labs/mois/kursach2sem/ostis-geography/problem-solver/cxx/modules/hotelModule/HotelModule.hpp|70575555e446299671f6068578e809e740d19e782c6af55ac83a4eedad8dd35e
+/home/igor/labs/mois/kursach2sem/ostis-geography/problem-solver/cxx/modules/hotelModule/searcher/HotelSearcher.hpp|56ec849c7f7d2deb437bf43dfe79c3f01a4d140660dde371733f927a1936a8f0
+/home/igor/labs/mois/kursach2sem/ostis-geography/bin/sc-code-generator|694265264ab35216b210d10b174b678c22a3cfb88c7b0f3013b4ede1f94094f3

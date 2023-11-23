@@ -1,0 +1,21 @@
+Tractor_stadium.scs <- concept_football_stadium;
+=> nrel_main_idtf:
+   [Tractor_stadium]
+   (* <- lang_en;; <- name_en;;*);
+   [Стадион Трактор]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+
+=> nrel_region:
+   minsk_region;
+
+=> nrel_phone_number:
+   [375 17 230-53-34]
+   (* <- concept_phone_number;;*);
+
+=> nrel_address:
+   [ул.Ванеева,3]
+   (*<-concept_address;;*);
+
+=> nrel_capacity:
+   [17 600]
+   (*<-concept_capacity;;*);;

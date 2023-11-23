@@ -1,0 +1,66 @@
+Minsk_Arena.scs <- concept_ice_arena;
+=> nrel_main_idtf:
+   [Minsk-Arena]
+   (* <- lang_en;; <- name_en;;*);
+   [Минск-Арена]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+
+=> nrel_region:
+   minsk_region;
+
+=> nrel_phone_number:
+   [375 17 209-06-48]
+   (* <- concept_phone_number;;*);
+
+=> nrel_address:
+   [пр.Победителей, 111]
+   (*<-concept_address;;*);
+
+ => nrel_average_mark:
+   [4,7]
+   (*<-concept_average_mark;;*);
+
+=> nrel_capacity:
+   [15086]
+   (*<-concept_capacity;;*);
+
+=>nrel_open_time:
+    ..otime
+    (*<- sc_node;;*);
+
+=>nrel_close_time:
+    ..ctime
+    (*<- sc_node;;*);;
+
+
+..otime <- concept_open_time;
+    	<- ..hour1 ;
+    	<- ..minute1 ;;
+    	
+..ctime <- concept_close_time;
+    	<- ..hour2 ;
+    	<- ..minute2 ;;
+
+..hour1
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    8
+    	(* <- concept_number;;*);;
+
+..minute1
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    0
+    	(* <- concept_number;;*);;
+
+..hour2
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    22
+    	(* <- concept_number;;*);;
+
+..minute2
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    0
+    	(* <- concept_number;;*);;

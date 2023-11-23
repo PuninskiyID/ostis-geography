@@ -1,0 +1,47 @@
+fire_rescue_unit_N2_brest <- concept_fire_station;
+=> nrel_main_idtf:
+   [FRU №2 (Brest)]
+   (* <- lang_en;; <- name_en;;*);
+   [ПАСЧ №2 (Брест)]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+=> nrel_address:
+    [Брест, городской посёлок Шерешево, ул. Кирова, 6]
+    (*<-concept_address;;*);
+=> nrel_geographical_coordinates:
+    ..coordinates  
+    (*<- sc_node;;*);
+=> nrel_phone_number:
+   [-]
+   (* <- concept_phone_number;;*);
+=> nrel_region:
+   brest_region;;
+
+
+..coordinates <- concept_geographical_coordinates;
+    <- ..latitude ;
+    <- ..longitude ;;
+   
+..latitude 
+<- concept_latitude;
+=> nrel_measurement_in_degrees:
+    52.560471
+    	(* <- concept_number;;*);;
+    	
+..longitude 
+<- concept_longitude;
+=> nrel_measurement_in_degrees:
+    24.214379
+    	(* <- concept_number;;*);;
+    	
+sc_node_class 
+->52.560471;
+->24.214379;;
+
+
+  
+
+   
+   
+   
+   
+ 

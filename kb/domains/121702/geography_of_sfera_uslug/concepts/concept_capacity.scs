@@ -1,0 +1,34 @@
+concept_capacity
+<- sc_node_class;
+=> nrel_main_idtf:
+	[Вместимость]
+	(* <- lang_ru;; *);
+	[Capacity]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (Вместимость)]
+		(* <- lang_ru;; *);
+		[Def. (Capacity)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Вместимость - числовая величина, характеризующая максимальное количество посетителей.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Capacity - a numerical value that characterizes the maximum number of visitors.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_visitor
+		};;
+	*);;

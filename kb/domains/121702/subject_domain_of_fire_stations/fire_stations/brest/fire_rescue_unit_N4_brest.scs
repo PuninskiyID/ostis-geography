@@ -1,0 +1,45 @@
+fire_rescue_unit_N4_brest <- concept_fire_station;
+=> nrel_main_idtf:
+   [FRU №4 (Brest)]
+   (* <- lang_en;; <- name_en;;*);
+   [ПАСЧ №4 (Брест)]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+=> nrel_address:
+    [Брест, ул. Бориса Маслова, 2]
+    (*<-concept_address;;*);
+=> nrel_geographical_coordinates:
+    ..coordinates  
+    (*<- sc_node;;*);
+=> nrel_phone_number:
+   [112]
+   (* <- concept_phone_number;;*);
+=> nrel_region:
+   brest_region;;
+
+
+..coordinates <- concept_geographical_coordinates;
+    <- ..latitude ;
+    <- ..longitude ;;
+   
+..latitude 
+<- concept_latitude;
+=> nrel_measurement_in_degrees:
+    52.063331
+    	(* <- concept_number;;*);;
+    	
+..longitude 
+<- concept_longitude;
+=> nrel_measurement_in_degrees:
+    23.711930
+    	(* <- concept_number;;*);;
+    	
+sc_node_class 
+->52.063331;
+->23.711930;;
+  
+
+   
+   
+   
+   
+ 

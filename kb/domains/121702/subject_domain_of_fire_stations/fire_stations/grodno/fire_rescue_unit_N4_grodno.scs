@@ -1,0 +1,43 @@
+fire_rescue_unit_N4_grodno <- concept_fire_station;
+=> nrel_main_idtf:
+   [FRU №4 (Grodno)]
+   (* <- lang_en;; <- name_en;;*);
+   [ПАСЧ №4 (Гродно)]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+=> nrel_address:
+    [Гродно, Красногвардейская ул., 3, корп. 1]
+    (*<-concept_address;;*);
+=> nrel_geographical_coordinates:
+    ..coordinates  
+    (*<- sc_node;;*);
+=> nrel_phone_number:
+   [-]
+   (* <- concept_phone_number;;*);
+=> nrel_region:
+   grodno_region;;
+
+
+..coordinates <- concept_geographical_coordinates;
+    <- ..latitude ;
+    <- ..longitude ;;
+   
+..latitude 
+<- concept_latitude;
+=> nrel_measurement_in_degrees:
+    53.668687
+    	(* <- concept_number;;*);;
+    	
+..longitude 
+<- concept_longitude;
+=> nrel_measurement_in_degrees:
+    23.819175
+    	(* <- concept_number;;*);;
+    	
+sc_node_class 
+->53.668687;
+->23.819175;;
+   
+   
+
+   
+ 

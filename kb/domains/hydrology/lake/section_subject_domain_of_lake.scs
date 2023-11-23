@@ -1,0 +1,49 @@
+section_subject_domain_of_lake
+=> nrel_main_idtf:
+	[Раздел. Предметная область озера]
+   (* <- lang_ru;; *);
+	[Section. Subject domain of lake] 
+   (* <- lang_en;; *);
+<- atomic_section;;
+
+section_subject_domain_of_lake = [*
+	subject_domain_of_lake
+<- sc_node_struct;
+	=> nrel_main_idtf:
+      [Предметная область озера]
+      (* <- lang_ru;; *);
+      [Subject domain of lake]
+      (* <- lang_en;; *);
+	<- subject_domain;
+	-> rrel_maximum_studied_object_class:
+            concept_origin_type;     
+            concept_water_balance;
+	-> rrel_not_maximum_studied_object_class:
+            concept_lake;
+	-> rrel_explored_relation:
+            nrel_age;
+            nrel_coordinates;
+            nrel_position_relative_to_the_syrface;
+            nrel_topograpgic;
+            nrel_coastine_length;
+            nrel_maximal_depth;
+            nrel_origin_type;
+            nrel_surface_area;
+            nrel_volume;
+            nrel_water_balance;
+            nrel_water_basin_area;;
+*];;
+
+section_subject_domain_of_lake
+-> rrel_key_sc_element:
+            concept_origin_type;     
+            concept_water_balance;
+            concept_coastine_length;
+            concept_maximal_depth;
+            concept_surface_area;
+            concept_volume;
+            concept_water_basin_area;
+            nrel_age;
+            nrel_coordinates;
+            nrel_position_relative_to_the_surface;
+            nrel_topograpgic;;

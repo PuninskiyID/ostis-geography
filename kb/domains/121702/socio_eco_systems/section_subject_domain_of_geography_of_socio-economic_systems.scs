@@ -1,0 +1,50 @@
+section_subject_domain_of_geography_of_socioeconomic_systems
+=> nrel_main_idtf:
+	[Раздел. Предметная область географии социально-экономических систем]
+   (* <- lang_ru;; *);
+	[Section. Subject domain of geography of socio-economic systems] 
+   (* <- lang_en;; *);
+<- atomic_section;;
+
+section_subject_domain_of_geography_of_socioeconomic_systems <= nrel_section_decomposition:
+section_subject_domain_of_geography_of_the_service_sector;
+section_subject_domain_of_geography_of_urbanization;
+section_subject_domain_of_geography_of_markets;
+section_subject_domain_of_geography_of_public_safety;
+section_subject_domain_of_geography_of_regions;;
+
+
+subject_domain_of_geography_of_socioeconomic_systems
+<- sc_node_struct;
+=> nrel_main_idtf:
+      [Предметная область географии социально-экономических систем]
+      (* <- lang_ru;; *);
+      [Subject domain of geography of socio-economic systems]
+      (* <- lang_en;; *);
+<- subject_domain;
+-> rrel_maximum_studied_object_class:
+	concept_geography_of_socioeconomic_systems;
+-> rrel_not_maximum_studied_object_class:
+	concept_open_time;
+	concept_close_time;
+-> rrel_explored_relation:
+	nrel_city_district;
+	nrel_measurement_in_belarussian_rubles;
+	nrel_open_time;
+	nrel_close_time;
+	nrel_phone_number;
+	nrel_region;;
+
+section_subject_domain_of_geography_of_socioeconomic_systems
+-> rrel_key_sc_element:
+	concept_open_time;
+	concept_close_time;
+	nrel_city_district;
+	nrel_measurement_in_belarussian_rubles;
+	nrel_open_time;
+	nrel_close_time;
+	nrel_phone_number;
+	nrel_region;
+	subject_domain_of_geography_of_socioeconomic_systems;;
+
+

@@ -1,0 +1,72 @@
+le_gosse_restaurant <- concept_restaurant;
+=> nrel_main_idtf:
+   [Le Gosse]
+   (* <- lang_en;; <- name_en;;*);
+   [Ле Госсе]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+
+=> nrel_phone_number:
+   [8 029 618 06 18]
+   (* <- concept_phone_number;;*);
+
+=> nrel_address:
+    [г. Минск, пл. Свободы, 13/2]
+    (*<-concept_address;;*);
+
+=> nrel_city_district:
+   [centralny_city_district_minsk]
+   (* <- concept_city_district;;*);
+
+=> nrel_restaurant_type:
+   [cafe]
+   (* <- concept_restaurant_type;;*);
+
+=>nrel_open_time:
+    ..otime
+    (*<- sc_node;;*);
+
+=>nrel_close_time:
+    ..ctime
+    (*<- sc_node;;*);
+
+=>nrel_rating:
+    ..avatt
+    (*<- sc_node;;*);;
+
+..otime <- concept_open_time;
+    	<- ..hour1 ;
+    	<- ..minute1 ;;
+    	
+..ctime <- concept_close_time;
+    	<- ..hour2 ;
+    	<- ..minute2 ;;
+
+..hour1
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    8
+    	(* <- concept_number;;*);;
+
+..minute1
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    0
+    	(* <- concept_number;;*);;
+
+..hour2
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    23
+    	(* <- concept_number;;*);;
+
+..minute2
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    0
+    	(* <- concept_number;;*);;
+
+..avatt 
+<- concept_rating;
+=>nrel_rating:
+	4.4
+        (* <- concept_number;;*);;

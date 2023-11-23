@@ -1,0 +1,66 @@
+Sport_Palace_Minsk.scs <- concept_ice_arena;
+=> nrel_main_idtf:
+   [Sports Palace Minsk]
+   (* <- lang_en;; <- name_en;;*);
+   [Дворец Спорта Минск]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+
+=> nrel_region:
+   minsk_region;
+
+=> nrel_phone_number:
+   [375 17 203-27-33]
+   (* <- concept_phone_number;;*);
+
+=> nrel_address:
+   [проспект Победителей, 4]
+   (*<-concept_address;;*);
+
+ => nrel_average_mark:
+   [4,3]
+   (*<-concept_average_mark;;*);
+
+=> nrel_capacity:
+   [3 311]
+   (*<-concept_capacity;;*);
+
+=>nrel_open_time:
+    ..otime
+    (*<- sc_node;;*);
+
+=>nrel_close_time:
+    ..ctime
+    (*<- sc_node;;*);;
+
+
+..otime <- concept_open_time;
+    	<- ..hour1 ;
+    	<- ..minute1 ;;
+    	
+..ctime <- concept_close_time;
+    	<- ..hour2 ;
+    	<- ..minute2 ;;
+
+..hour1
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    8
+    	(* <- concept_number;;*);;
+
+..minute1
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    30
+    	(* <- concept_number;;*);;
+
+..hour2
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    17
+    	(* <- concept_number;;*);;
+
+..minute2
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    0
+    	(* <- concept_number;;*);;

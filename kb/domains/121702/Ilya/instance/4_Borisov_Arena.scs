@@ -1,0 +1,62 @@
+Borisov_Arena.scs <- concept_football_stadium;
+=> nrel_main_idtf:
+   [Borisov-Arena]
+   (* <- lang_en;; <- name_en;;*);
+   [Борисов-Арена]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+
+=> nrel_region:
+   minsk_region;
+
+=> nrel_phone_number:
+   [375 17 770-99-04]
+   (* <- concept_phone_number;;*);
+
+=> nrel_address:
+   [ул.Гагарина,119]
+   (*<-concept_address;;*);
+
+=> nrel_capacity:
+   [13 126]
+   (*<-concept_capacity;;*);
+
+=>nrel_open_time:
+    ..otime
+    (*<- sc_node;;*);
+
+=>nrel_close_time:
+    ..ctime
+    (*<- sc_node;;*);;
+
+
+..otime <- concept_open_time;
+    	<- ..hour1 ;
+    	<- ..minute1 ;;
+    	
+..ctime <- concept_close_time;
+    	<- ..hour2 ;
+    	<- ..minute2 ;;
+
+..hour1
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    8
+    	(* <- concept_number;;*);;
+
+..minute1
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    30
+    	(* <- concept_number;;*);;
+
+..hour2
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    23
+    	(* <- concept_number;;*);;
+
+..minute2
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    0
+    	(* <- concept_number;;*);;

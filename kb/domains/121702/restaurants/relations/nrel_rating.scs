@@ -1,0 +1,52 @@
+nrel_rating
+<-sc_node_norole_relation;
+<-relation;
+<-binary_relation;
+<-oriented_relation;
+<-antireflexive_relation;
+<-antitransitive_relation;
+<-asymmetric_relation;
+=>nrel_main_idtf:
+	[рейтинг*]
+	(* <- lang_ru;; *);
+	[rating*]
+	(* <- lang_en;; *);
+=>nrel_first_domain: concept_restaurant;
+=>nrel_second_domain: concept_rating;
+=>nrel_definitional_domain:
+	...
+	(*
+	<= nrel_combination:
+		{
+		concept_restaurant;
+		concept_rating
+		};;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (рейтинг*)]
+		(* <- lang_ru;; *);
+		[Def. (rating*)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Рейтинг* - бинарное отношение, связывающее ресторан и рейтинг.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Rating* - a binary relation that connects a restaurant and a rating.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+            concept_restaurant;
+            concept_rating
+		};;
+	*);;

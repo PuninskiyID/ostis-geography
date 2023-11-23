@@ -1,0 +1,47 @@
+fire_rescue_unit_N1_brest <- concept_fire_station;
+=> nrel_main_idtf:
+   [FRU №1 (Brest)]
+   (* <- lang_en;; <- name_en;;*);
+   [ПАСЧ №1 (Брест)]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+=> nrel_address:
+    [Брест, улица Загороднева]
+    (*<-concept_address;;*);
+=> nrel_geographical_coordinates:
+    ..coordinates  
+    (*<- sc_node;;*);
+=> nrel_phone_number:
+   [+375 16 245-08-87]
+   (* <- concept_phone_number;;*);
+=> nrel_region:
+   brest_region;;
+
+
+..coordinates <- concept_geographical_coordinates;
+    <- ..latitude ;
+    <- ..longitude ;;
+   
+..latitude 
+<- concept_latitude;
+=> nrel_measurement_in_degrees:
+    52.108671
+    	(* <- concept_number;;*);;
+    	
+..longitude 
+<- concept_longitude;
+=> nrel_measurement_in_degrees:
+    23.692220
+    	(* <- concept_number;;*);;
+    	
+sc_node_class 
+->52.108671;
+->23.692220;;
+
+
+  
+
+   
+   
+   
+   
+ 

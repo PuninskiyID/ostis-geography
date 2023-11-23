@@ -1,0 +1,40 @@
+section_subject_domain_of_gym
+=> nrel_main_idtf:
+	[Раздел. Предметная область тренажерных залов Беларуси]
+   (* <- lang_ru;; *);
+	[Section. Subject domain of gyms of Belarus] 
+   (* <- lang_en;; *);
+<- atomic_section;;
+
+section_subject_domain_of_gym = [*
+	subject_domain_of_gym
+<- sc_node_struct;
+	=> nrel_main_idtf:
+      [Предметная область тренажерных залов Беларуси]
+      (* <- lang_ru;; *);
+      [Subject domain of gyms of Belarus]
+      (* <- lang_en;; *);
+	<- subject_domain;
+	-> rrel_maximum_studied_object_class:
+            concept_gym;     
+			concept_average_mark;
+            concept_open_time;
+        	concept_hour;
+	-> rrel_explored_relation:	       
+            nrel_close_time;
+        	nrel_open_time;
+			nrel_average_mark;
+            nrel_address;
+            nrel_phone_number;;
+*];;
+
+section_subject_domain_of_gym
+-> rrel_key_sc_element:
+			concept_hour;
+			nrel_open_time;
+			nrel_close_time;
+			concept_gym;
+			concept_phone_number;
+			concept_average_mark;
+			nrel_average_mark;
+			nrel_capacity;;

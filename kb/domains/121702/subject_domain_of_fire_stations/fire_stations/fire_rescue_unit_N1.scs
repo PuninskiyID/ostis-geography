@@ -1,0 +1,39 @@
+fire_rescue_unit_N1 <- concept_fire_station;
+=> nrel_main_idtf:
+   [FRU №1]
+   (* <- lang_en;; <- name_en;;*);
+   [ПАСЧ №1]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+=> nrel_address:
+    [г.Минск улица Рыбалко, 20А]
+    (*<-concept_address;;*);
+=> nrel_geographical_coordinates:
+    ..coordinates  
+    (*<- sc_node;;*);
+=> nrel_phone_number:
+   [+375 17 298-18-49]
+   (* <- concept_phone_number;;*);
+=> nrel_region:
+   minsk_region;;
+   
+..coordinates <- concept_geographical_coordinates;
+    	<- ..latitude ;
+    	<- ..longitude ;;
+
+..latitude 
+<- concept_latitude;
+=> nrel_measurement_in_degrees:
+    53.887873
+    	(* <- concept_number;;*);;
+    	
+..longitude 
+<- concept_longitude;
+=> nrel_measurement_in_degrees:
+    27.595096
+    	(* <- concept_number;;*);;
+    	
+sc_node_class 
+->53.887873;
+->27.595096;;
+   
+   

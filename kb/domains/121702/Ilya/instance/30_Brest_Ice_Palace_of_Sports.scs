@@ -1,0 +1,66 @@
+Brest_Ice_Palace_of_Sports.scs <- concept_ice_arena;
+=> nrel_main_idtf:
+   [Brest Ice Palace of Sports]
+   (* <- lang_en;; <- name_en;;*);
+   [Брестский ледовый дворец спорта]
+   (* <- lang_ru;; <- name_ru;; <- name;;*);
+
+=> nrel_region:
+   grodno_region;
+
+=> nrel_phone_number:
+   [375 16 253-47-90]
+   (* <- concept_phone_number;;*);
+
+=> nrel_address:
+   [Московская ул., 151А]
+   (*<-concept_address;;*);
+
+ => nrel_average_mark:
+   [4,3]
+   (*<-concept_average_mark;;*);
+
+=> nrel_capacity:
+   [2 000]
+   (*<-concept_capacity;;*);
+
+=>nrel_open_time:
+    ..otime
+    (*<- sc_node;;*);
+
+=>nrel_close_time:
+    ..ctime
+    (*<- sc_node;;*);;
+
+
+..otime <- concept_open_time;
+    	<- ..hour1 ;
+    	<- ..minute1 ;;
+    	
+..ctime <- concept_close_time;
+    	<- ..hour2 ;
+    	<- ..minute2 ;;
+
+..hour1
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    7
+    	(* <- concept_number;;*);;
+
+..minute1
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    0
+    	(* <- concept_number;;*);;
+
+..hour2
+<- concept_hour;
+=> nrel_measurement_in_hours:
+    22
+    	(* <- concept_number;;*);;
+
+..minute2
+<- concept_minute;
+=> nrel_measurement_in_minutes:
+    0
+    	(* <- concept_number;;*);;
