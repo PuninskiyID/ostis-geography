@@ -1,0 +1,35 @@
+concept_length
+<- sc_node_class;
+=> nrel_main_idtf:
+	[длина]
+	(* <- lang_ru;; *);
+	[length]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (длина)]
+		(* <- lang_ru;; *);
+		[Def. (length)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[длина — физическая характеристика, представляющая собой меру протяженности между двумя точками объекта.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[length - a physical characteristic that represents the measure between two points of object.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_length
+		};;
+	*);
+<= nrel_inclusion: concept_physic;;

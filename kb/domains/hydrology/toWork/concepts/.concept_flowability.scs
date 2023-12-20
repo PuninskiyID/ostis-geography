@@ -1,0 +1,37 @@
+concept_flowability
+<- sc_node_class;
+=> nrel_main_idtf:
+	[проточность гидрологического объекта]
+	(* <- lang_ru;; *);
+	[flowability]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (проточность гидрологического объекта)]
+		(* <- lang_ru;; *);
+		[Def. (flowability)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[проточность гидрологического объекта — характеристика, определяющая тип водообмена озера.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[hydrology object streamflow - characteristic that determines the type of lake water exchange.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_lake;
+			concept_flowability
+		};;
+	*);
+<= nrel_inclusion: concept_hydrology;;
+

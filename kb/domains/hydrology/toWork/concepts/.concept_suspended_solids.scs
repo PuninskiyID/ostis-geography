@@ -1,0 +1,36 @@
+concept_suspended_solids
+<-sc_node_class;
+=>nrel_main_idtf:
+	[Взвешенные вещества]
+	(* <- lang_ru;; *);
+	[Suspended solids]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (Взвешенные вещества)]
+		(* <- lang_ru;; *);
+		[Def. (Suspended solids)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Взвешенные вещества - это вещества, выделенные из воды.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Suspended substances are substances isolated from water.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_suspended_solids
+		};;
+	*);;
+<= nrel_inclusion: concept_hydrology;;
+

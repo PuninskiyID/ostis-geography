@@ -1,4 +1,4 @@
-nrel_inflow
+nrel_organic_matter
 <-sc_node_norole_relation;
 <-relation;
 <-binary_relation;
@@ -7,46 +7,46 @@ nrel_inflow
 <-antitransitive_relation;
 <-asymmetric_relation;
 =>nrel_main_idtf:
-	[приток]
+	[Органическое вещество]
 	(* <- lang_ru;; *);
-	[inflow]
+	[Organic matter]
 	(* <- lang_en;; *);
 =>nrel_first_domain: concept_hydrology_object;
-=>nrel_second_domain: concept_river;
+=>nrel_second_domain: concept_organic_matter;
 =>nrel_definitional_domain:
 	...
 	(*
 	<= nrel_combination:
 		{
 		concept_hydrology_object;
-		concept_river
+		concept_organic_matter
 		};;
 	*);
 <- rrel_key_sc_element:
 	...
 	(*
 	=>nrel_main_idtf:
-		[Опр. (приток)]
+		[Опр. (Органическое вещество)]
 		(* <- lang_ru;; *);
-		[Def. (inflow)]
+		[Def. (Organic matter)]
 		(* <- lang_en;; *);;
 	<- definition;;
 	<= nrel_sc_text_translation:
 		...
 		(*
 		->rrel_example:
-			[Прито́к* — водоток (река, ручей, канал), впадающий в другой водоток или водоём.]
+			[Органическое вещество* - бинарное отношение, связывающее гидрологический объект и органическое вещество.]
 			(* <- lang_ru;; *);;
 		*);
 		...
 		(*
 		-> rrel_example: 
-			[Inflow* - a watercourse (river, stream, canal) that flows into another watercourse or body of water.]
+			[Organic matter* - a binary relation that connects a hydrology object and organic matter.]
 			(* <- lang_en;; *);;
 		*);;
 	<= nrel_using_constants:
 		{
-            concept_hydrology_object;
-	    concept_river
+		concept_hydrology_object;
+            	concept_organic_matter
 		};;
 	*);;

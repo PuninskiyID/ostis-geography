@@ -1,0 +1,35 @@
+concept_recreational_potential
+<-sc_node_class;
+=>nrel_main_idtf:
+	[Рекреационный потенциал]
+	(* <- lang_ru;; *);
+	[Recreational potential]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (Рекреационный потенциал)]
+		(* <- lang_ru;; *);
+		[Def. (Recreational potential)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Рекреационный потенциал можно определить как совокупность природных, культурно-исторических и социально-экономических предпосылок для организации рекреационной деятельности на определенной территории.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Recreational potential - set of natural, cultural-historical and socio-economic prerequisites for organizing recreational activities on certain territory.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_recreational_potential
+		};;
+	*);;
+<= nrel_inclusion: concept_hydrology;;

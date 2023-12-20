@@ -1,0 +1,53 @@
+nrel_surface_water_temperature
+<-sc_node_norole_relation;
+<-relation;
+<-binary_relation;
+<-oriented_relation;
+<-antireflexive_relation;
+<-antitransitive_relation;
+<-asymmetric_relation;
+=>nrel_main_idtf:
+	[температура поверхностного слоя воды]
+	(* <- lang_ru;; *);
+	[surface water temperature]
+	(* <- lang_en;; *);
+=>nrel_first_domain: concept_hydrology_object;
+=>nrel_second_domain: concept_temperature;
+=>nrel_definitional_domain:
+	...
+	(*
+	<= nrel_combination:
+		{
+		concept_hydrology_object;
+		concept_temperature
+		};;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (температура поверхностного слоя воды)]
+		(* <- lang_ru;; *);
+		[Def. (surface water temperature)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[температура поверхностного слоя воды* - бинарное отношение, связывающее водный объект и температуру его поверхностного слоя.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[surface water temperature* - a binary relation that connects a hydrology object and it's surface layer temperature.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+            concept_hydrology_object;
+		    concept_temperature;
+		    concept_surface_layer
+		};;
+	*);;

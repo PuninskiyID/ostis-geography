@@ -1,0 +1,36 @@
+concept_organic_matter
+<-sc_node_class;
+=>nrel_main_idtf:
+	[Органическое вещество]
+	(* <- lang_ru;; *);
+	[Organic matter]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (Органическое вещество)]
+		(* <- lang_ru;; *);
+		[Def. (Organic matter)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Органическое вещество - естественный компонент, содержащий углерод.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Organic matter - natural component containing carbon.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_organic_matter;
+			concept_carbon
+		};;
+	*);;
+<= nrel_inclusion: concept_chemistry;;

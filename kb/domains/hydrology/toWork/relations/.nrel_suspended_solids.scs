@@ -1,4 +1,4 @@
-nrel_inflow
+nrel_suspended_solids
 <-sc_node_norole_relation;
 <-relation;
 <-binary_relation;
@@ -7,46 +7,46 @@ nrel_inflow
 <-antitransitive_relation;
 <-asymmetric_relation;
 =>nrel_main_idtf:
-	[приток]
+	[Взвешенные вещества]
 	(* <- lang_ru;; *);
-	[inflow]
+	[Suspended solids]
 	(* <- lang_en;; *);
 =>nrel_first_domain: concept_hydrology_object;
-=>nrel_second_domain: concept_river;
+=>nrel_second_domain: concept_suspended_solids;
 =>nrel_definitional_domain:
 	...
 	(*
 	<= nrel_combination:
 		{
 		concept_hydrology_object;
-		concept_river
+		concept_suspended_solids
 		};;
 	*);
 <- rrel_key_sc_element:
 	...
 	(*
 	=>nrel_main_idtf:
-		[Опр. (приток)]
+		[Опр. (Взвешенные вещества)]
 		(* <- lang_ru;; *);
-		[Def. (inflow)]
+		[Def. (Suspended solids)]
 		(* <- lang_en;; *);;
 	<- definition;;
 	<= nrel_sc_text_translation:
 		...
 		(*
 		->rrel_example:
-			[Прито́к* — водоток (река, ручей, канал), впадающий в другой водоток или водоём.]
+			[Взвешенные вещества* - бинарное отношение, связывающее гидрологический обьект и взвешенные вещества.]
 			(* <- lang_ru;; *);;
 		*);
 		...
 		(*
 		-> rrel_example: 
-			[Inflow* - a watercourse (river, stream, canal) that flows into another watercourse or body of water.]
+			[Suspended solids* - a binary relation that connects hydrology object and suspended solids.]
 			(* <- lang_en;; *);;
 		*);;
 	<= nrel_using_constants:
 		{
-            concept_hydrology_object;
-	    concept_river
+            	concept_hydrology_object;
+		concept_suspended_solids
 		};;
 	*);;

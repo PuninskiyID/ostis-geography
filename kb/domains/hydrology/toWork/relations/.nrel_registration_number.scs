@@ -1,4 +1,4 @@
-nrel_inflow
+nrel_registration_number
 <-sc_node_norole_relation;
 <-relation;
 <-binary_relation;
@@ -7,46 +7,46 @@ nrel_inflow
 <-antitransitive_relation;
 <-asymmetric_relation;
 =>nrel_main_idtf:
-	[приток]
+	[Учетный номер]
 	(* <- lang_ru;; *);
-	[inflow]
+	[Registration number]
 	(* <- lang_en;; *);
 =>nrel_first_domain: concept_hydrology_object;
-=>nrel_second_domain: concept_river;
+=>nrel_second_domain: concept_registration_number;
 =>nrel_definitional_domain:
 	...
 	(*
 	<= nrel_combination:
 		{
 		concept_hydrology_object;
-		concept_river
+		concept_registration_number
 		};;
 	*);
 <- rrel_key_sc_element:
 	...
 	(*
 	=>nrel_main_idtf:
-		[Опр. (приток)]
+		[Опр. (Учетный номер)]
 		(* <- lang_ru;; *);
-		[Def. (inflow)]
+		[Def. (Registration number)]
 		(* <- lang_en;; *);;
 	<- definition;;
 	<= nrel_sc_text_translation:
 		...
 		(*
 		->rrel_example:
-			[Прито́к* — водоток (река, ручей, канал), впадающий в другой водоток или водоём.]
+			[Учетный номер* - бинарное отношение, связывающее учетный номер и гидрологический обьект.]
 			(* <- lang_ru;; *);;
 		*);
 		...
 		(*
 		-> rrel_example: 
-			[Inflow* - a watercourse (river, stream, canal) that flows into another watercourse or body of water.]
+			[Registration number* - a binary relation that connects a registration number and hydrology object.]
 			(* <- lang_en;; *);;
 		*);;
 	<= nrel_using_constants:
 		{
-            concept_hydrology_object;
-	    concept_river
+            	concept_hydrology_object;
+		concept_registration_number
 		};;
 	*);;

@@ -1,0 +1,37 @@
+concept_functional_zone
+<- sc_node_class;
+=> nrel_main_idtf:
+	[площадь водного бассейна]
+	(* <- lang_ru;; *);
+	[water basin area]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (площадь водного бассейна)]
+		(* <- lang_ru;; *);
+		[Def. (water basin area)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[площадь водного бассейна - область земной поверхности, являющейся водным бассейной объекта гидрологии.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[water basin area - an area of the Earth's surface which is it's basin.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_basin;
+			concept_area
+		};;
+	*);
+<= nrel_inclusion: concept_hydrology;;
+

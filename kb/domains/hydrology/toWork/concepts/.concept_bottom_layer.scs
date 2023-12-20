@@ -1,0 +1,38 @@
+concept_bottom_water_layer
+<- sc_node_class;
+=> nrel_main_idtf:
+	[придонный слой воды]
+	(* <- lang_ru;; *);
+	[bottom layer of water]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (придонный слой воды)]
+		(* <- lang_ru;; *);
+		[Def. (bottom layer of water)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[придонный слой воды — слой воды ближе к дну, обладающий своими характерными свойствами.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[bottom layer of water - the layer of water closer to the bottom, characterized by its distinct properties.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_water_object;
+			concept_water_layer;
+			concept_bottom_water_layer
+		};;
+	*);
+<= nrel_inclusion: concept_hydrology;;
+

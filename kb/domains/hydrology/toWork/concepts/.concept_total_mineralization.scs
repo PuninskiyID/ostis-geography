@@ -1,0 +1,37 @@
+concept_total_mineralization
+<- sc_node_class;
+=> nrel_main_idtf:
+	[общая минерализация]
+	(* <- lang_ru;; *);
+	[total mineralization]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (общая минерализация)]
+		(* <- lang_ru;; *);
+		[Def. (total mineralization)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[общая минерализация - количественная характеристика общего содержания минеральных веществ.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[total mineralization - a quantitative measure of the overall content of minerals.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_total_mineralization;
+			concept_mineralization;
+		};;
+	*);
+<= nrel_inclusion: concept_hydrochemistry;;
+

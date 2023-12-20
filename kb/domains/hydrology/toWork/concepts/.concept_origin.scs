@@ -1,0 +1,36 @@
+concept_origin
+<-sc_node_not_relation;
+=>nrel_main_idtf:
+	[исток]
+	(* <- lang_ru;; *);
+	[origin]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (исток)]
+		(* <- lang_ru;; *);
+		[Def. (origin)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Исток - это место, где начинается река, её источник.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Origin is the place where a river begins, its source.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_origin
+		};;
+	*);;
+<= nrel_inclusion: concept_hydrology;;
+

@@ -1,4 +1,4 @@
-nrel_inflow
+nrel_river_system
 <-sc_node_norole_relation;
 <-relation;
 <-binary_relation;
@@ -7,18 +7,18 @@ nrel_inflow
 <-antitransitive_relation;
 <-asymmetric_relation;
 =>nrel_main_idtf:
-	[приток]
+	[речная система]
 	(* <- lang_ru;; *);
-	[inflow]
+	[river system]
 	(* <- lang_en;; *);
-=>nrel_first_domain: concept_hydrology_object;
+=>nrel_first_domain: concept_river;
 =>nrel_second_domain: concept_river;
 =>nrel_definitional_domain:
 	...
 	(*
 	<= nrel_combination:
 		{
-		concept_hydrology_object;
+		concept_river;
 		concept_river
 		};;
 	*);
@@ -26,27 +26,27 @@ nrel_inflow
 	...
 	(*
 	=>nrel_main_idtf:
-		[Опр. (приток)]
+		[Опр. (речная система)]
 		(* <- lang_ru;; *);
-		[Def. (inflow)]
+		[Def. (river system)]
 		(* <- lang_en;; *);;
 	<- definition;;
 	<= nrel_sc_text_translation:
 		...
 		(*
 		->rrel_example:
-			[Прито́к* — водоток (река, ручей, канал), впадающий в другой водоток или водоём.]
+			[речная система* - бинарное отношение, связывающее реку и главную реку, притоком которой является первая река.]
 			(* <- lang_ru;; *);;
 		*);
 		...
 		(*
 		-> rrel_example: 
-			[Inflow* - a watercourse (river, stream, canal) that flows into another watercourse or body of water.]
+			[river system* - a binary relation connecting a river and the main river, the tributary of which is the first river.]
 			(* <- lang_en;; *);;
 		*);;
 	<= nrel_using_constants:
 		{
-            concept_hydrology_object;
-	    concept_river
+            concept_river;
+		    concept_river_system
 		};;
 	*);;

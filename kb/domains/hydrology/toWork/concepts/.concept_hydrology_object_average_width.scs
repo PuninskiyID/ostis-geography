@@ -1,0 +1,38 @@
+concept_hydrology_object_average_width
+<- sc_node_class;
+=> nrel_main_idtf:
+	[средняя ширина гидрологического объекта]
+	(* <- lang_ru;; *);
+	[hydrology object average width]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (средняя ширина гидрологического объекта)]
+		(* <- lang_ru;; *);
+		[Def. (hydrology object average width)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[средняя ширина гидрологического объекта — среднее значение расстояния между противоположными берегами или границами объекта.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[hydrology object average width - the average distance between opposite banks or boundaries of the object.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_hydrology_object_average_width;
+			concept_hydrology_object;
+			concept_average;
+			concept_width
+		};;
+	*);
+<= nrel_inclusion: concept_hydrology;;

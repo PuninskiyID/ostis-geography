@@ -1,0 +1,37 @@
+concept_basin
+<-sc_node_class;
+=>nrel_main_idtf:
+	[бассейн]
+	(* <- lang_ru;; *);
+	[basin]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (бассейн)]
+		(* <- lang_ru;; *);
+		[Def. (basin)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Водосборный бассейн (также водосборная площадь, водосбор, бассейн) — территория земной поверхности, с которой все поверхностные и грунтовые воды стекают в данный водоём или водоток, включая различные его притоки.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		->rrel_example:
+			[A drainage basin (also drainage area, watershed, basin) is the area of the earth's surface from which all surface and groundwater flows into a given reservoir or watercourse, including its various tributaries.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_basin;
+			concept_hydrology_object
+		};;
+	*);
+
+<= nrel_inclusion: concept_hydrology;;

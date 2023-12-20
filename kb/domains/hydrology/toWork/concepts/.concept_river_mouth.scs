@@ -1,0 +1,38 @@
+concept_river_mouth
+<-sc_node_class;
+=>nrel_main_idtf:
+	[устье]
+	(* <- lang_ru;; *);
+	[river mouth]
+	(* <- lang_en;; *);
+=>nrel_system_identifier:
+	[estuary];
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (устье)]
+		(* <- lang_ru;; *);
+		[Def. (river mouth)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Устье - это место, где река впадает в озеро, море или океан.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[River mouth - place where a river flows into a lake, sea, or ocean.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_river;
+			concept_river_mouth
+		};;
+	*);;
+<= nrel_inclusion: concept_hydrology;;

@@ -1,0 +1,36 @@
+concept_coastline_length
+<- sc_node_class;
+=> nrel_main_idtf:
+	[длина береговой линии]
+	(* <- lang_ru;; *);
+	[coastline length]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (длина береговой линии)]
+		(* <- lang_ru;; *);
+		[Def. (coastline length)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[длина береговой линии — измерение протяженности линии раздела между сушей и водой, представляющей собой границу озера или другого водоема.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[coastline length - the measurement of the extent of the line that forms the boundary between land and water, representing the edge of a lake or another body of water.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_hydrology_object;
+			concept_coastline
+		};;
+	*);
+<= nrel_inclusion: concept_hydrology;;

@@ -1,0 +1,38 @@
+concept_hydrology_object_max_depth
+<- sc_node_class;
+=> nrel_main_idtf:
+	[максимальная глубина гидрологического объекта]
+	(* <- lang_ru;; *);
+	[hydrology object max depth]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (максимальная глубина гидрологического объекта)]
+		(* <- lang_ru;; *);
+		[Def. (hydrology object max depth)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[максимальная глубина гидрологического объекта — это наибольшее вертикальное расстояние от поверхности воды до дна на определенном участке водоема.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[hydrology object max depth - is the greatest vertical distance from the water surface to the bottom at a specific location in a body of water.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_hydrology_object_max_depth;
+			concept_hydrology_object;
+			concept_depth;
+			concept_max
+		};;
+	*);
+<= nrel_inclusion: concept_hydrology;;

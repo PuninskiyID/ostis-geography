@@ -1,0 +1,36 @@
+concept_water_quality
+<-sc_node_class;
+=>nrel_main_idtf:
+	[Качество воды]
+	(* <- lang_ru;; *);
+	[Water quality]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (Качество воды)]
+		(* <- lang_ru;; *);
+		[Def. (Water quality)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Качество воды — это химические, физические и биологические характеристики воды, основанные на стандартах ее использования.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[Water quality is the chemical, physical and biological characteristics of water based on standards for its use.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_water_quality
+		};;
+	*);;
+<= nrel_inclusion: concept_hydrology;;
+

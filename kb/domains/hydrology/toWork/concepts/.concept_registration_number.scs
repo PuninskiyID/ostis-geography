@@ -1,0 +1,36 @@
+concept_registration_number
+<-sc_node_class;
+=>nrel_main_idtf:
+	[Учетный номер]
+	(* <- lang_ru;; *);
+	[Registration number]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (Учетный номер)]
+		(* <- lang_ru;; *);
+		[Def. (Registration number)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Учетный номер — это уникальный номер вида AAA-000 ,присваивающийся каждому гидрологическому обьекту в РБ Топографо-геодезическим республиканским унитарным предприятием «Белгеодезия».]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[The accounting number is a unique number of the type AAA-000, assigned to each hydrological object in the Republic of Belarus and it's carried out by the Topographic and Geodetic Republican Unitary Enterprise "Belgeodezia".]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_registration_number
+		};;
+	*);;
+<= nrel_inclusion: concept_hydrology;;
+

@@ -1,0 +1,37 @@
+concept_trophic_status
+<-sc_node_class;
+=>nrel_main_idtf:
+	[Трофический статус]
+	(* <- lang_ru;; *);
+	[Trophic status]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (Трофический статус)]
+		(* <- lang_ru;; *);
+		[Def. (Trophic status)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[Трофический статус водоема - это интегральная характеристика, определяемая множеством взаимосвязанных физико-химических и биологических процессов, происходящих в водной экосистеме]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[The trophic status of a reservoir - integral characteristic determined by many interrelated physicochemical and biological processes occurring in the aquatic ecosystem]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_trophic_status;
+			concept_hydrology_object
+		};;
+	*);;
+<= nrel_inclusion: concept_hydrology;;
+

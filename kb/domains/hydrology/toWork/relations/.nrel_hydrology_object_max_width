@@ -1,0 +1,52 @@
+nrel_hydrology_object_maximal_width
+<-sc_node_norole_relation;
+<-relation;
+<-binary_relation;
+<-oriented_relation;
+<-antireflexive_relation;
+<-antitransitive_relation;
+<-asymmetric_relation;
+=>nrel_main_idtf:
+	[максимальная ширина гидрологического объекта]
+	(* <- lang_ru;; *);
+	[hydrology object maximal width]
+	(* <- lang_en;; *);
+=>nrel_first_domain: concept_hydrology_object;
+=>nrel_second_domain: concept_hydrology_object_maximal_width;
+=>nrel_definitional_domain:
+	...
+	(*
+	<= nrel_combination:
+		{
+		concept_hydrology_object;
+		concept_hydrology_object_maximal_width
+		};;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (максимальная ширина гидрологического объекта)]
+		(* <- lang_ru;; *);
+		[Def. (hydrology object maximal width)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[максимальная ширина гидрологического объекта* - бинарное отношение, связывающее гидрологический объект и максимальную ширину.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[hydrology object maximal width* - a binary relation that connects a hydrology object and max width.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+            concept_hydrology_object;
+		    concept_hydrology_object_maximal_width
+		};;
+	*);;

@@ -1,4 +1,4 @@
-nrel_inflow
+nrel_water_transparency
 <-sc_node_norole_relation;
 <-relation;
 <-binary_relation;
@@ -7,46 +7,46 @@ nrel_inflow
 <-antitransitive_relation;
 <-asymmetric_relation;
 =>nrel_main_idtf:
-	[приток]
+	[прозрачность воды]
 	(* <- lang_ru;; *);
-	[inflow]
+	[water transparency]
 	(* <- lang_en;; *);
 =>nrel_first_domain: concept_hydrology_object;
-=>nrel_second_domain: concept_river;
+=>nrel_second_domain: concept_water_transparency;
 =>nrel_definitional_domain:
 	...
 	(*
 	<= nrel_combination:
 		{
 		concept_hydrology_object;
-		concept_river
+		concept_water_transparency
 		};;
 	*);
 <- rrel_key_sc_element:
 	...
 	(*
 	=>nrel_main_idtf:
-		[Опр. (приток)]
+		[Опр. (прозрачность воды)]
 		(* <- lang_ru;; *);
-		[Def. (inflow)]
+		[Def. (water transparency)]
 		(* <- lang_en;; *);;
 	<- definition;;
 	<= nrel_sc_text_translation:
 		...
 		(*
 		->rrel_example:
-			[Прито́к* — водоток (река, ручей, канал), впадающий в другой водоток или водоём.]
+			[прозрачность воды* - бинарное отношение, связывающее объект гидрологии и прозрачность воды.]
 			(* <- lang_ru;; *);;
 		*);
 		...
 		(*
 		-> rrel_example: 
-			[Inflow* - a watercourse (river, stream, canal) that flows into another watercourse or body of water.]
+			[water transparency* - a binary relation that connects a hydrology object and water transparency.]
 			(* <- lang_en;; *);;
 		*);;
 	<= nrel_using_constants:
 		{
             concept_hydrology_object;
-	    concept_river
+		    concept_water_transparency
 		};;
 	*);;

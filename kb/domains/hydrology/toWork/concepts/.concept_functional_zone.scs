@@ -1,0 +1,36 @@
+concept_functional_zone
+<- sc_node_class;
+=> nrel_main_idtf:
+	[функциональная зона]
+	(* <- lang_ru;; *);
+	[functional zone]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (функциональная зона)]
+		(* <- lang_ru;; *);
+		[Def. (functional zone)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[функциональная зона - область земной поверхности, где вода выполняет определенные функции в гидрологических процессах, таких как водосборы, водозаборы, водоотводы и другие типы  процессов.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[functional zone -  an area of the Earth's surface where water performs specific functions in hydrological processes, such as watersheds, water intakes, water discharges, and other types of processes.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_functional_zone;
+			concept_hydrology_process
+		};;
+	*);
+<= nrel_inclusion: concept_hydrology;;

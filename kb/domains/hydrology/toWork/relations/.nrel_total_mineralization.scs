@@ -1,0 +1,53 @@
+nrel_total_mineralization
+<- sc_node_norole_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- antitransitive_relation;
+<- asymmetric_relation;
+=> nrel_main_idtf:
+	[общая минерализация]
+	(* <- lang_ru;; *);
+	[total mineralization]
+	(* <- lang_en;; *);
+=> nrel_first_domain: concept_hydrology_object;
+=> nrel_second_domain: concept_total_mineralization;
+=> nrel_definitional_domain:
+	...
+	(*
+	<= nrel_combination:
+		{
+			concept_hydrology_object;
+			concept_total_mineralization;
+		};;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (общая минерализация)]
+		(* <- lang_ru;; *);
+		[Def. (total mineralization)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[общая минерализация* - бинарное отношение, связывающее гидрологический объект и общую минерализацию воды.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[total mineralization* - a binary relation connecting a hydrology object and the total mineralization of water.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+		concept_hydrology_object;
+		concept_total_mineralization
+		};;
+	*);;
+

@@ -1,4 +1,4 @@
-nrel_outflow
+nrel_functional_zone
 <-sc_node_norole_relation;
 <-relation;
 <-binary_relation;
@@ -7,46 +7,46 @@ nrel_outflow
 <-antitransitive_relation;
 <-asymmetric_relation;
 =>nrel_main_idtf:
-	[выток]
+	[функциональная зона]
 	(* <- lang_ru;; *);
-	[outflow]
+	[functional zone]
 	(* <- lang_en;; *);
-=>nrel_first_domain: concept_lake;
-=>nrel_second_domain: concept_hydrology_object;
+=>nrel_first_domain: concept_hydrology_object;
+=>nrel_second_domain: concept_functional_zone;
 =>nrel_definitional_domain:
 	...
 	(*
 	<= nrel_combination:
 		{
-		concept_lake;
-		concept_hydrology_object
+		concept_hydrology_object;
+		concept_functional_zone
 		};;
 	*);
 <- rrel_key_sc_element:
 	...
 	(*
 	=>nrel_main_idtf:
-		[Опр. (выток)]
+		[Опр. (функциональная зона)]
 		(* <- lang_ru;; *);
-		[Def. (outflow)]
+		[Def. (functional zone)]
 		(* <- lang_en;; *);;
 	<- definition;;
 	<= nrel_sc_text_translation:
 		...
 		(*
 		->rrel_example:
-			[Выток* — место сопряжения стоячего водоема и водотока сопровождающееся убыванием воды из первого.]
+			[функциональная зона* - бинарное отношение, связывающее гидрологический объект и функциональную зону.]
 			(* <- lang_ru;; *);;
 		*);
 		...
 		(*
 		-> rrel_example: 
-			[Outflow* - the junction of a standing reservoir and a watercourse, accompanied by a decrease in water from the first.]
+			[functional zone* - a binary relation that connects a hydrology object and a functional zone.]
 			(* <- lang_en;; *);;
 		*);;
 	<= nrel_using_constants:
 		{
             concept_hydrology_object;
-	    concept_lake
+		    concept_functional_zone
 		};;
 	*);;
