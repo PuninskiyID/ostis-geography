@@ -1,0 +1,37 @@
+concept_origin_type
+<- sc_node_class;
+=> nrel_main_idtf:
+	[тип происхождения]
+	(* <- lang_ru;; *);
+	[origin type]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (тип происхождения)]
+		(* <- lang_ru;; *);
+		[Def. (origin type)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[тип происхождения - характеристика объекта гидрологии, определяющая то, как он образован.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[origin type - characteristic of a hydrology object that determines how it is formed.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_hydrology_object;
+			concept_origin_type
+		};;
+	*);
+<= nrel_inclusion: concept_hydrology;;
+

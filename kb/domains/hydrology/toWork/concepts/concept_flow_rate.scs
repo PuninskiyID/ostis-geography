@@ -1,0 +1,38 @@
+concept_flow_rate
+<- sc_node_class;
+=> nrel_main_idtf:
+	[проточность]
+	(* <- lang_ru;; *);
+	[flow rate]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (проточность)]
+		(* <- lang_ru;; *);
+		[Def. (flow rate)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[проточность - объем воды, проходящий через единицу времени в определенном сечении гидрологического объекта.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[flow rate - the average distance between opposite banks or boundaries of the object.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_flow_rate;
+			concept_flowability;
+			concept_hydrology_object
+		};;
+	*);
+<= nrel_inclusion: concept_hydrology;;
+

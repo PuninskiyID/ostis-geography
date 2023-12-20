@@ -1,0 +1,38 @@
+concept_total_water_exchange_time
+<- sc_node_class;
+=> nrel_main_idtf:
+	[полное время водообмена]
+	(* <- lang_ru;; *);
+	[total water exchange time]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (полное время водообмена)]
+		(* <- lang_ru;; *);
+		[Def. (total water exchange time)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[время полного водообмена — суммарный период, за который происходит обмен полного объёма воды некоторого объекта гидрологии.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[total water exchange time - the cumulative period during which full volume of water of hydrology object exchanges.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_hydrology_object;
+			concept_water_exchange;
+			concept_time_period
+		};;
+	*);
+<= nrel_inclusion: concept_hydrology;;
+

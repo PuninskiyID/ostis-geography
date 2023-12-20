@@ -1,0 +1,37 @@
+concept_water_temperature
+<- sc_node_class;
+=> nrel_main_idtf:
+	[температура воды]
+	(* <- lang_ru;; *);
+	[water temperature]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (температура воды)]
+		(* <- lang_ru;; *);
+		[Def. (water temperature)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[температура воды — характеристика теплового состояния воды.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[water temperature - a characteristic of the thermal state of water.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_hydrology_object;
+			concept_temperature;
+		};;
+	*);
+<= nrel_inclusion: concept_hydrology;;
+

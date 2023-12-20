@@ -1,0 +1,38 @@
+concept_water_exchange
+<- sc_node_class;
+=> nrel_main_idtf:
+	[водный обмен]
+	(* <- lang_ru;; *);
+	[water exchange]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (водный обмен)]
+		(* <- lang_ru;; *);
+		[Def. (water exchange)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[водный обмен — процесс перемещения воды между различными частями гидросистемы.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[water exchange - the process of water moving between different parts of the hydrology system.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_hydrology_object;
+			concept_hydrology_system;
+			concept_water_moving
+		};;
+	*);
+<= nrel_inclusion: concept_hydrology;;
+

@@ -1,0 +1,37 @@
+concept_topography
+<- sc_node_class;
+=> nrel_main_idtf:
+	[топография]
+	(* <- lang_ru;; *);
+	[topography]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (топография)]
+		(* <- lang_ru;; *);
+		[Def. (topography)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[топография — описание местности в которой расположен объект гидрографии.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[topography - description of the shape and relief of the place where hydrology object is located.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_hydrology_object;
+			concept_topography
+		};;
+	*);
+<= nrel_inclusion: concept_hydrology;;
+

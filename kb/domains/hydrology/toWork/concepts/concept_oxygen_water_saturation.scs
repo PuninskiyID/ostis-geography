@@ -1,0 +1,37 @@
+concept_water_oxygen_saturation
+<- sc_node_class;
+=> nrel_main_idtf:
+	[насыщенность воды кислородом]
+	(* <- lang_ru;; *);
+	[oxygen water saturation]
+	(* <- lang_en;; *);
+<- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf:
+		[Опр. (насыщенность воды кислородом)]
+		(* <- lang_ru;; *);
+		[Def. (oxygen water saturation)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_example:
+			[насыщенность воды кислородом — процентное содержание растворенного кислорода в воде относительно максимально возможного значения при данных условиях.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example:
+			[oxygen water saturation - the percentage of dissolved oxygen in water relative to the maximum possible value under given conditions.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+			concept_water_object;
+			concept_oxygen_saturation
+		};;
+	*);
+<= nrel_inclusion: concept_hydrology;;
+
