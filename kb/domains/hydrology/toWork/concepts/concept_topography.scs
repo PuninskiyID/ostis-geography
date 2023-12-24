@@ -18,20 +18,20 @@ concept_topography
 		...
 		(*
 		-> rrel_example:
-			[топография — описание местности в которой расположен объект гидрографии.]
+			[топография — описание местности в которой расположен объект.]
 			(* <- lang_ru;; *);;
 		*);
 		...
 		(*
 		-> rrel_example:
-			[topography - description of the shape and relief of the place where hydrology object is located.]
+			[topography - description of the shape and relief of the place where object is located.]
 			(* <- lang_en;; *);;
 		*);;
 	<= nrel_using_constants:
 		{
-			concept_hydrology_object;
+			concept_object;
 			concept_topography
 		};;
 	*);
-<= nrel_inclusion: concept_hydrology;;
+<= nrel_inclusion: concept_geography;;
 

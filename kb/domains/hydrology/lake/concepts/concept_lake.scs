@@ -29,7 +29,8 @@ concept_lake
 		*);;
 	<= nrel_using_constants:
 		{
-			concept_lake
+			concept_lake;
+			concept_hydrology_object
 		};;
 	*);
 <= nrel_inclusion: concept_hydrology;;

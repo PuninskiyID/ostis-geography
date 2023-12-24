@@ -1,0 +1,36 @@
+concept_volume
+  <- sc_node_class;
+  => nrel_main_idtf:
+    [объём]
+    (* <- lang_ru;; *);
+    [volume]
+    (* <- lang_en;; *);
+  <- rrel_key_sc_element:
+    ...
+    (*
+    => nrel_main_idtf:
+      [Опр. (объём)]
+      (* <- lang_ru;; *);
+      [Def. (volume)]
+      (* <- lang_en;; *);;
+    <- definition;;
+    <= nrel_sc_text_translation:
+      ...
+      (*
+      -> rrel_example:
+        [объём — количественная характеристика пространства, занимаемого телом или веществом.]
+        (* <- lang_ru;; *);;
+      *);
+      ...
+      (*
+      -> rrel_example:
+        [volume - quantitative characteristic of the space occupied by a body or substance.]
+        (* <- lang_en;; *);;
+      *);;
+    <= nrel_using_constants:
+      {
+        concept_volume
+      };;
+    *);
+  <= nrel_inclusion: concept_physics;;
+

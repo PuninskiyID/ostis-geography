@@ -1,4 +1,4 @@
-nrel_topographic
+nrel_flowability
 <-sc_node_norole_relation;
 <-relation;
 <-binary_relation;
@@ -7,46 +7,47 @@ nrel_topographic
 <-antitransitive_relation;
 <-asymmetric_relation;
 =>nrel_main_idtf:
-	[топографическая характеристика]
+	[Проточность]
 	(* <- lang_ru;; *);
-	[topographic characteristic]
+	[Flowability]
 	(* <- lang_en;; *);
-=>nrel_first_domain: concept_river;
-=>nrel_second_domain: concept_topography;
+=>nrel_first_domain: concept_hydrology_object;
+=>nrel_second_domain: concept_flowability;
 =>nrel_definitional_domain:
 	...
 	(*
 	<= nrel_combination:
 		{
-		concept_river;
-		concept_topography
+		concept_hydrology_object;
+		concept_flowability
 		};;
 	*);
 <- rrel_key_sc_element:
 	...
 	(*
 	=>nrel_main_idtf:
-		[Опр. (топографическая характеристика)]
+		[Опр. (Проточность)]
 		(* <- lang_ru;; *);
-		[Def. (topographic characteristic)]
+		[Def. (Flowability)]
 		(* <- lang_en;; *);;
 	<- definition;;
 	<= nrel_sc_text_translation:
 		...
 		(*
 		->rrel_example:
-			[топографическая характеристика* - бинарное отношение, связывающее реку и топографию.]
+			[Проточность* - бинарное отношение, связывающее гидрологический объект и проточность.]
 			(* <- lang_ru;; *);;
 		*);
 		...
 		(*
 		-> rrel_example: 
-			[topographic characteristic* - a binary relation that connects a river and a topography.]
+			[Flowability* - binary relation connecting hydrology object and flowability.]
 			(* <- lang_en;; *);;
 		*);;
 	<= nrel_using_constants:
 		{
-            concept_river;
-		    concept_topography
+            	concept_hydrology_object;
+		concept_flowability
 		};;
-	*);;
+	*);
+

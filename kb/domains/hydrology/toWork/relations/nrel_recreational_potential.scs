@@ -35,13 +35,13 @@ nrel_recreational_potential
 		...
 		(*
 		->rrel_example:
-			[Рекреационный потенциал* - бинарное отношение, связывающее рекреационный потенциал и гидрологический обьект.]
+			[Рекреационный потенциал* - бинарное отношение, связывающее гидрологический обьект и его рекреационный потенциал.]
 			(* <- lang_ru;; *);;
 		*);
 		...
 		(*
 		-> rrel_example: 
-			[Recreational potential* - a binary relation that connects a recreational potential and hydrology object.]
+			[Recreational potential* - a binary relation that connects a hydrology object and it's recreational potential.]
 			(* <- lang_en;; *);;
 		*);;
 	<= nrel_using_constants:

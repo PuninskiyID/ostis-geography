@@ -1,4 +1,4 @@
-nrel_topographic
+nrel_flow_rate
 <-sc_node_norole_relation;
 <-relation;
 <-binary_relation;
@@ -7,46 +7,47 @@ nrel_topographic
 <-antitransitive_relation;
 <-asymmetric_relation;
 =>nrel_main_idtf:
-	[топографическая характеристика]
+	[скорость потока]
 	(* <- lang_ru;; *);
-	[topographic characteristic]
+	[flow rate]
 	(* <- lang_en;; *);
-=>nrel_first_domain: concept_river;
-=>nrel_second_domain: concept_topography;
+=>nrel_first_domain: concept_watercourse;
+=>nrel_second_domain: concept_flow_rate;
 =>nrel_definitional_domain:
 	...
 	(*
 	<= nrel_combination:
 		{
-		concept_river;
-		concept_topography
+		concept_watercourse;
+		concept_flow_rate
 		};;
 	*);
 <- rrel_key_sc_element:
 	...
 	(*
 	=>nrel_main_idtf:
-		[Опр. (топографическая характеристика)]
+		[Опр. (скорость потока)]
 		(* <- lang_ru;; *);
-		[Def. (topographic characteristic)]
+		[Def. (flow rate)]
 		(* <- lang_en;; *);;
 	<- definition;;
 	<= nrel_sc_text_translation:
 		...
 		(*
 		->rrel_example:
-			[топографическая характеристика* - бинарное отношение, связывающее реку и топографию.]
+			[скорость потока* - ориентированное бинарное отношение, связывающее реку и  скорость течения.]
 			(* <- lang_ru;; *);;
 		*);
 		...
 		(*
 		-> rrel_example: 
-			[topographic characteristic* - a binary relation that connects a river and a topography.]
+			[flow rate* - an oriented binary relation that connects a river and flow rate.]
 			(* <- lang_en;; *);;
 		*);;
 	<= nrel_using_constants:
 		{
-            concept_river;
-		    concept_topography
+            concept_watercourse;
+		    concept_flow_rate
 		};;
-	*);;
+	*);
+

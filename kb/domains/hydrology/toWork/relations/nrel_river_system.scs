@@ -11,14 +11,14 @@ nrel_river_system
 	(* <- lang_ru;; *);
 	[river system]
 	(* <- lang_en;; *);
-=>nrel_first_domain: concept_river;
+=>nrel_first_domain: concept_watercourse;
 =>nrel_second_domain: concept_river;
 =>nrel_definitional_domain:
 	...
 	(*
 	<= nrel_combination:
 		{
-		concept_river;
+		concept_watercourse;
 		concept_river
 		};;
 	*);
@@ -35,18 +35,19 @@ nrel_river_system
 		...
 		(*
 		->rrel_example:
-			[речная система* - бинарное отношение, связывающее реку и главную реку, притоком которой является первая река.]
+			[речная система* - бинарное отношение, связывающее водоток и главную реку, притоком которой является водоток.]
 			(* <- lang_ru;; *);;
 		*);
 		...
 		(*
 		-> rrel_example: 
-			[river system* - a binary relation connecting a river and the main river, the tributary of which is the first river.]
+			[river system* - a binary relation connecting a watercourse and the main river, the tributary of which is the watercourse.]
 			(* <- lang_en;; *);;
 		*);;
 	<= nrel_using_constants:
 		{
-            concept_river;
-		    concept_river_system
+            concept_watercourse;
+		    concept_river_system;
+		    concept_river
 		};;
 	*);;

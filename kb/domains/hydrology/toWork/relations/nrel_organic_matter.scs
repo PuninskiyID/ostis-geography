@@ -35,13 +35,13 @@ nrel_organic_matter
 		...
 		(*
 		->rrel_example:
-			[Органическое вещество* - бинарное отношение, связывающее гидрологический объект и органическое вещество.]
+			[Органическое вещество* - бинарное отношение, связывающее гидрологический объект и общее количество органического вещества.]
 			(* <- lang_ru;; *);;
 		*);
 		...
 		(*
 		-> rrel_example: 
-			[Organic matter* - a binary relation that connects a hydrology object and organic matter.]
+			[Organic matter* - a binary relation that connects a hydrology object and total amount of organic matter.]
 			(* <- lang_en;; *);;
 		*);;
 	<= nrel_using_constants:

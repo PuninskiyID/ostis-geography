@@ -1,0 +1,54 @@
+nrel_total_water_exchange_time
+<-sc_node_norole_relation;
+<-relation;
+<-binary_relation;
+<-oriented_relation;
+<-antireflexive_relation;
+<-antitransitive_relation;
+<-asymmetric_relation;
+=>nrel_main_idtf:
+	[время полного водообмена]
+	(* <- lang_ru;; *);
+	[total water exchange time]
+	(* <- lang_en;; *);
+=>nrel_first_domain: concept_water_exchange;
+=>nrel_second_domain: concept_time_period;
+=>nrel_definitional_domain:
+	...
+	(*
+	<= nrel_combination:
+		{
+		concept_water_exchange;
+		concept_time_period
+		};;
+	*);
+<- rrel_key_sc_element:
+	...
+	(*
+	=>nrel_main_idtf:
+		[Опр. (время полного водообмена)]
+		(* <- lang_ru;; *);
+		[Def. (total water exchange time)]
+		(* <- lang_en;; *);;
+	<- definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		->rrel_example:
+			[время полного водообмена* - бинарное отношение, связывающее водообмен и полное время водообмена.]
+			(* <- lang_ru;; *);;
+		*);
+		...
+		(*
+		-> rrel_example: 
+			[total water exchange time* - a binary relation connecting water exchange and total time of water exchange.]
+			(* <- lang_en;; *);;
+		*);;
+	<= nrel_using_constants:
+		{
+            concept_water_exchange;
+		    concept_water_exchange_time;
+		    concept_time_period
+		};;
+	*);
+

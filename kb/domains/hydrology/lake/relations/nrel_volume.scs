@@ -1,4 +1,4 @@
-nrel_pool_area
+nrel_volume
 <-sc_node_norole_relation;
 <-relation;
 <-binary_relation;
@@ -7,46 +7,46 @@ nrel_pool_area
 <-antitransitive_relation;
 <-asymmetric_relation;
 =>nrel_main_idtf:
-	[площадь бассейна]
+	[объём]
 	(* <- lang_ru;; *);
-	[pool area]
+	[volume]
 	(* <- lang_en;; *);
-=>nrel_first_domain: concept_river;
+=>nrel_first_domain: concept_lake;
 =>nrel_second_domain: concept_number;
 =>nrel_definitional_domain:
 	...
 	(*
 	<= nrel_combination:
 		{
-		concept_river;
-		concept_number
+		concept_object;
+		concept_volume
 		};;
 	*);
 <- rrel_key_sc_element:
 	...
 	(*
 	=>nrel_main_idtf:
-		[Опр. (площадь бассейна)]
+		[Опр. (объём)]
 		(* <- lang_ru;; *);
-		[Def. (pool area)]
+		[Def. (volume)]
 		(* <- lang_en;; *);;
 	<- definition;;
 	<= nrel_sc_text_translation:
 		...
 		(*
 		->rrel_example:
-			[площадь бассейна* - бинарное отношение, связывающее реку и число.]
+			[объём* - бинарное отношение, связывающее объект в пространстве и его объём.]
 			(* <- lang_ru;; *);;
 		*);
 		...
 		(*
 		-> rrel_example: 
-			[pool area* - a binary relation that connects a river and a number.]
+			[volume* - binary relation connecting an object in space and its volume.]
 			(* <- lang_en;; *);;
 		*);;
 	<= nrel_using_constants:
 		{
-            concept_river;
-		    concept_number
+            concept_object;
+		    concept_volume
 		};;
 	*);;
